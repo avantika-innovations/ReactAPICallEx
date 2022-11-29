@@ -84,7 +84,7 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
 
   return (
     
-    <Container style={{backgroundColor:'#80808075'}}>
+    <Container style={{backgroundColor:'rgb(128 128 128/0.13)'}}>
       <ThreeColumnContainer>
         {/* {subheading && <Subheading>{subheading}</Subheading>} */}
         <Heading>{heading}</Heading>
@@ -129,9 +129,9 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
                 
               </div>
 
-            <div className="rounded-lg shadow-lg bg-white max-w-sm m-5" style={{width:'auto',height:'auto',textAlign:'center'}}>
+            <div className="rounded-lg shadow-lg bg-white max-w-sm m-5" style={{textAlign:'center'}}>
               <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                <img className="rounded-t-lg" src="../../../../images/p2.PNG" alt=""/>
+                <img className="rounded-t-lg" src="../../../../images/p2.PNG" alt="" style={{display: 'block',marginLeft: 'auto',marginRight: 'auto'}}/>
               </a>
               <div className="p-6">
                 <h5 className="text-gray-900 text-xl font-medium mb-2">DR. KUSHANAVA PABI</h5>

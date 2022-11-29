@@ -1,10 +1,12 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/jsx-no-undef */
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
 
-import Header from "../headers/light.js";
+import Header, { NavLinks } from "../headers/light.js";
 
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 import DesignIllustration from "../../images/design-illustration-2.svg";
@@ -52,10 +54,340 @@ export default ({ roundedHeaderButton }) => {
   return (
     <>
       <Header roundedHeaderButton={roundedHeaderButton} />
+      
+        <nav className="navbar navbar-expand-lg shadow-md py-2 relative flex items-center w-full justify-between mt-5" style={{paddingLeft:'auto',paddingRight:'auto'}}>
+          <div className="px-6 w-full flex flex-wrap items-center justify-between" style={{float:'left'}}>
+            <div className="flex items-center">
+              <button
+                className="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContentY"
+                aria-controls="navbarSupportedContentY"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  className="w-5"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div className="navbar-collapse grow items-center" id="navbarSupportedContentY">
+              <ul className="navbar-nav mr-auto lg:flex lg:flex-row" style={{marginLeft:'auto'}}>
+
+                <li className="nav-item">
+                  {/* <a className="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" >Home</a> */}
+                  {/* <a href="#!" className="underline decoration-transparent hover:decoration-inherit transition duration-300 ease-in-out">A link with underline on hover</a> */}
+                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Homepage</button>
+                  
+                </li>
+
+                <li className="nav-item">
+                  <div className="dropdown relative"> 
+                    <a className="text-gray-500 hover:text-gray-700  focus:text-gray-700  mr-4  dropdown-toggle  hidden-arrow  flex items-center " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                      <button type="button" className=" px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">District</button>
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fas"
+                          data-icon="caret-down"
+                          className="w-2"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 320 512"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                          ></path>
+                        </svg>
+                      
+                      </a>
+                      <ul className=" dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  bg-clip-padding  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                            District Committee
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                            District Governor's Official Club Visit
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                            Assistant Governor's
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" >
+                            District Events
+                          </a>
+                        </li>
+                        
+                      </ul>
+                  </div>
+                </li>
+
+                <li className="nav-item">
+                  <div className="dropdown relative">
+                    <a className="text-gray-500 hover:text-gray-700  focus:text-gray-700  mr-4  dropdown-toggle  hidden-arrow  flex items-center " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                    <button type="button" className=" w-100 inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">GML</button>
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="caret-down"
+                        className="w-2"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                        ></path>
+                      </svg>
+                      
+                    </a>
+                      <ul className=" dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  bg-clip-padding  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                          
+                            <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                              
+                              GML 2020-21
+                            </a>
+                            
+                        </li>
+                        
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                            Foothills 2021-22
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                          GML 2021-22
+                          </a>
+                        </li>
+                      </ul>
+                  </div>
+                </li>
+
+                <li className="nav-item mb-2 lg:mb-0">
+                  <div className="dropdown relative">
+                    <a className="text-gray-500 hover:text-gray-700  focus:text-gray-700  mr-4  dropdown-toggle  hidden-arrow  flex items-center " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                    <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Rotary Areas of Focus</button>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="caret-down"
+                      className="w-2"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 320 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                      ></path>
+                    </svg>
+                    </a>
+                      <ul className=" dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  bg-clip-padding  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                            Basic Education And Literacy
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                            Disease Prevention And Treatment
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                          Economic Community And Development
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                          Mental And Health Child 
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                          Peace And Conflict Prevention/Resolution 
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                          Water And Sanitation 
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                          Supporting The Environment 
+                          </a>
+                        </li>
+                      </ul>
+                  </div>
+                </li>
+
+                <li className="nav-item mb-2 lg:mb-0">
+                  <div className="dropdown relative">
+                    <links className="text-gray-500 hover:text-gray-700  focus:text-gray-700  mr-4  dropdown-toggle  hidden-arrow  flex items-center " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                      <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Partners in Service</button>
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="caret-down"
+                        className="w-2"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                        ></path>
+                      </svg>
+                    </links>
+                      <ul className=" dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  bg-clip-padding  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                            2020-21
+                          </a>
+                        <ul className="dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none"
+                              aria-labelledby="dropdownMenuButton1e"
+                            >
+                              <li>
+                                <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+                                  href="#"
+                                  >Action</a
+                                >
+                              </li>
+                              <li>
+                                <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+                                  href="#"
+                                  >Another action</a
+                                >
+                              </li>
+                              <li>
+                                <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100"
+                                  href="#"
+                                  >Something else here</a
+                                >
+                              </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li className="nav-item mb-2 lg:mb-0">
+                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Logo</button>
+                </li>
+
+                <li className="nav-item mb-2 lg:mb-0">
+                  <div className="dropdown relative">
+                    <a className="text-gray-500 hover:text-gray-700  focus:text-gray-700  mr-4  dropdown-toggle  hidden-arrow  flex items-center " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                    <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Club Websites</button>
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="caret-down"
+                      className="w-2"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 320 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                      ></path>
+                    </svg>
+                    </a>
+                      <ul className=" dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  bg-clip-padding  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                            Rotary Club of Bolpur-Santiniketan
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                            Rotary Club of Gangtok
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                          Rotary Club of Guwahati City
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                          Rotary Club of Malda
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                          Rotary Club of Tezpur 
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                          Rotary Club of Siliguri Central
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                          Rotary Club of Orchid City Shillong 
+                          </a>
+                        </li>
+                      </ul>
+                  </div>
+                </li>
+
+                <li className="nav-item mb-2 lg:mb-0">
+                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Projects</button>
+                </li>
+
+                <li className="nav-item mb-2 lg:mb-0">
+                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Rotary Year 2023-24</button>
+                </li>
+
+                <li className="nav-item mb-2 lg:mb-0">
+                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Contact Us</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      
+      
+      
       <Container>
         <TwoColumn  >
             
-          <LeftColumn>
+          <LeftColumn style={{marginRight:'20px'}}>
           <IllustrationContainer>
                <div
                   id="carouselDarkVariant"

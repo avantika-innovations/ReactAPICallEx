@@ -35,16 +35,17 @@ export default () => {
         }
       />
       <MainFeature
-        subheading={<Subheading>Quality Work</Subheading>}
+        // subheading={<Subheading>ZONE6 : DISTRICT 3240</Subheading>}
         imageSrc={heroScreenshotImageSrc}
         imageBorder={true}
         imageDecoratorBlob={true}
       />
       <FeatureWithSteps
-        subheading={<Subheading>STEPS</Subheading>}
+        // subheading={<Subheading>STEPS</Subheading>}
         heading={
           <>
-            Easy to <HighlightedText>Get Started.</HighlightedText>
+            {/* Easy to <HighlightedText>Get Started.</HighlightedText> */}
+            RI THEME VIDEO 2022-23
           </>
         }
         textOnLeft={false}
@@ -53,10 +54,11 @@ export default () => {
         decoratorBlobCss={tw`xl:w-40 xl:h-40 opacity-15 -translate-x-1/2 left-1/2`}
       />
       <MainFeature2
-        subheading={<Subheading>VALUES</Subheading>}
+        // subheading={<Subheading>VALUES</Subheading>}
         heading={
           <>
-            We Always Abide by Our <HighlightedText>Principles.</HighlightedText>
+            ABOUT US
+            <HighlightedText>ROTARY INTERNATIONAL DISTRICT 3240</HighlightedText>
           </>
         }
         imageSrc={prototypeIllustrationImageSrc}
@@ -138,7 +140,7 @@ export default () => {
           }
         ]}
       />
-      <FAQ
+      {/* <FAQ
         subheading={<Subheading>FAQS</Subheading>}
         heading={
           <>
@@ -177,7 +179,7 @@ export default () => {
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
           }
         ]}
-      />
+      /> */}
       <GetStarted/>
       <Footer />
     </AnimationRevealPage>

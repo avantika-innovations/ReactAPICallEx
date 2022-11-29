@@ -135,7 +135,9 @@ export default ({
   ];
 
   return (
-    <AnimationRevealPage disabled>
+    <AnimationRevealPage 
+    disabled 
+    >
       <Container tw="bg-gray-100 -mx-8 -mt-8 pt-8 px-8">
         <Content2Xl style={{marginLeft:0,marginRight:0,maxWidth:'none'}}>
           {/* <NavRow>
@@ -299,44 +301,45 @@ const Block = ({ notifyIsVisible, components }) => {
   };
 
   return (
-    <div ref={ref} tw="mt-32">
-      <ComponentsType>{components.type}</ComponentsType>
-      <Components>
-        {Object.values(components.elements).map((component, componentIndex) => (
-          <Component key={componentIndex}>
-            <ComponentHeading>
-              <ComponentName>{component.name}</ComponentName>
-              <ComponentPreviewLink className="group" href={component.url} target="_blank">
-                View Live Demo{" "}
-                <ArrowRightIcon tw="transition duration-300 transform group-hover:translate-x-px ml-2 w-4 h-4" />
-              </ComponentPreviewLink>
-            </ComponentHeading>
-            <ComponentContent>
-              <ResizableBox
-                minWidth={310}
-                default={{
-                  width: "100%",
-                  height: "100%"
-                }}
-                bounds="parent"
-                disableDragging={true}
-                enableResizing={{ right: true }}
-                resizeHandleComponent={{ right: ResizeHandle }}
-                resizeHandleWrapperClass={`resizeHandleWrapper`}
-                onResize={() => updateComponentBlockIframeHeight(componentBlockRefs[component.url])}
-              >
-                <iframe
-                  src={component.url}
-                  title="Hero"
-                  width="100%"
-                  ref={ref => (componentBlockRefs[component.url] = ref)}
-                  onLoad={e => updateComponentBlockIframeHeight(e.target)}
-                />
-              </ResizableBox>
-            </ComponentContent>
-          </Component>
-        ))}
-      </Components>
-    </div>
+    // <div ref={ref} tw="mt-32">
+    //   <ComponentsType>{components.type}</ComponentsType>
+    //   <Components>
+    //     {Object.values(components.elements).map((component, componentIndex) => (
+    //       <Component key={componentIndex}>
+    //         <ComponentHeading>
+    //           <ComponentName>{component.name}</ComponentName>
+    //           <ComponentPreviewLink className="group" href={component.url} target="_blank">
+    //             View Live Demo{" "}
+    //             <ArrowRightIcon tw="transition duration-300 transform group-hover:translate-x-px ml-2 w-4 h-4" />
+    //           </ComponentPreviewLink>
+    //         </ComponentHeading>
+    //         <ComponentContent>
+    //           <ResizableBox
+    //             minWidth={310}
+    //             default={{
+    //               width: "100%",
+    //               height: "100%"
+    //             }}
+    //             bounds="parent"
+    //             disableDragging={true}
+    //             enableResizing={{ right: true }}
+    //             resizeHandleComponent={{ right: ResizeHandle }}
+    //             resizeHandleWrapperClass={`resizeHandleWrapper`}
+    //             onResize={() => updateComponentBlockIframeHeight(componentBlockRefs[component.url])}
+    //           >
+    //             <iframe
+    //               src={component.url}
+    //               title="Hero"
+    //               width="100%"
+    //               ref={ref => (componentBlockRefs[component.url] = ref)}
+    //               onLoad={e => updateComponentBlockIframeHeight(e.target)}
+    //             />
+    //           </ResizableBox>
+    //         </ComponentContent>
+    //       </Component>
+    //     ))}
+    //   </Components>
+    // </div>
+    <></>
   );
 };

@@ -9,7 +9,7 @@ import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
-const ImageColumn = tw(Column)`md:w-6/12 flex-shrink-0 relative`;
+const ImageColumn = tw(Column)`md:w-6/12 flex-shrink-0 relative h-2`;
 const TextColumn = styled(Column)(props => [
   tw`md:w-6/12 mt-16 md:mt-0`,
   props.textOnLeft ? tw`md:mr-12 lg:mr-16 md:order-first` : tw`md:ml-12 lg:ml-16 md:order-last`
@@ -40,10 +40,11 @@ const StepHeading = tw.h6`leading-none text-xl font-semibold`;
 const StepDescription = tw.p`mt-3 max-w-xs leading-loose text-sm text-gray-600 font-medium`;
 
 export default ({
-  subheading = "Our Expertise",
+  // subheading = "Our Expertise",
   heading = (
     <>
-      Designed & Developed by <span tw="text-primary-500">Professionals.</span>
+      {/* Designed & Developed by <span tw="text-primary-500">Professionals.</span> */}
+      RI THEME VIDEO 2022-23
     </>
   ),
   imageSrc = TeamIllustrationSrc,
@@ -77,24 +78,19 @@ export default ({
   return (
     <Container>
       <TwoColumn>
-        <ImageColumn>
-          <Image src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
-          {imageDecoratorBlob && <DecoratorBlob css={decoratorBlobCss} />}
+        <ImageColumn style={{height:'auto'}}>
+          <iframe width="100%" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+          </iframe>
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
-            <Subheading>{subheading}</Subheading>
+            {/* <Subheading>{subheading}</Subheading> */}
             <Heading>{heading}</Heading>
             <Steps>
-              {steps.map((step, index) => (
-                <Step key={index}>
-                  <StepNumber>{(index+1).toString().padStart(2,'0')}</StepNumber>
-                  <StepText>
-                    <StepHeading>{step.heading}</StepHeading>
-                    <StepDescription>{step.description}</StepDescription>
-                  </StepText>
-                </Step>
-              ))}
+              
+            District’s Channel For All Recorded Videos Of Events And Other Releases – Subscribe For Notifications.
+              <img src="https://www.rid3240.org/new/wp-content/uploads/2020/07/27a445684cbc228f33a4786560ab8998-removebg-preview.png" width="345"/>
+            Also Press the Bell “🔔” Icon To Never Miss An Update.
             </Steps>
           </TextContent>
         </TextColumn>

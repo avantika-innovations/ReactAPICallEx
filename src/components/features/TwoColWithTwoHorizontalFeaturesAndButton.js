@@ -60,10 +60,10 @@ const PrimaryButton = styled(PrimaryButtonBase)(props => [
 ]);
 
 export default ({
-  subheading = "Our Expertise",
+  // subheading = "Our Expertise",
   heading = (
     <>
-      Designed & Developed by <span tw="text-primary-500">Professionals.</span>
+      Designed & Developed by <span tw="text-secondary-500">Professionals.</span>
     </>
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -105,38 +105,43 @@ export default ({
   if (!features) features = defaultFeatures;
 
   return (
-    <Container>
+    <Container style={{backgroundColor:'#e2e8f0',textAlign:'justify'}}>
       <TwoColumn>
         <ImageColumn>
-          <Image src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
-          {showDecoratorBlob && <DecoratorBlob />}
+          <img src="https://www.rid3240.org/new/wp-content/uploads/2021/07/dg-details-with-india-map-2717x3077-1-1356x1536-1-904x1024.jpg" width="904" height="1024"/>
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
-            <Subheading>{subheading}</Subheading>
-            <Heading>{heading}</Heading>
-            <Description>{description}</Description>
+            {/* <Subheading>{subheading}</Subheading> */}
+            <Heading>ABOUT US</Heading>
+            <Heading style={{color:'#F1E649',webkitTextStrokeWidth:' 1px',webkitTextStrokeColor: 'purple'}}>ROTARY INTERNATIONAL DISTRICT 3240</Heading>
+            <Description>
+              Rotary International District 3240 lies in the North Eastern part of the Indian subcontinent between Nepal, China, Bhutan, Myanmar and Bangladesh.
+              This district is one of the largest Rotary districts in the world covering over 2,95, 607 sq. kms  of land.
+              Closeted within these perimeters is a land of snow clad mountains, verdant hills, expansive plains, mountain streams, majestic rivers, bustling towns, idyllic hamlets and miles and miles of land carpeted by lush green tea bushes.
+              R.I. District 3240 is a relatively new district formed in the Year 1990 and encompasses nine states of India – Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Sikkim, Tripura and eight revenue districts of West Bengal.
+              (Barddhaman, Birbhum, Malda, Dakshin Dinajpur, Uttar Dinajpur, Darjeeling, Jalpaiguri & Cooch Bihar). There are 92 clubs in the district with almost 3000 plus Rotarians.
+            </Description>
             <Features>
-              {features.map((feature, index) => (
-                <Feature key={index}>
+              
+                <Feature>
                   <FeatureHeadingContainer>
                     <FeatureIconContainer
-                      iconFilled={iconFilled}
-                      iconRoundedFull={iconRoundedFull}
-                      css={feature.iconContainerCss || iconContainerCss}
+                      // iconFilled={iconFilled}
+                      // iconRoundedFull={iconRoundedFull}
+                      // css={feature.iconContainerCss || iconContainerCss}
                     >
-                      {<feature.Icon />}
+                      
                     </FeatureIconContainer>
-                    <FeatureHeading>{feature.title}</FeatureHeading>
+                    <FeatureHeading></FeatureHeading>
                   </FeatureHeadingContainer>
-                  <FeatureDescription>{feature.description}</FeatureDescription>
+                  <FeatureDescription></FeatureDescription>
                 </Feature>
-              ))}
             </Features>
 
-            <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
+            {/* <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
               {primaryButtonText}
-            </PrimaryButton>
+            </PrimaryButton> */}
           </TextContent>
         </TextColumn>
       </TwoColumn>
