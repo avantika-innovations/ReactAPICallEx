@@ -9,7 +9,7 @@ import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-9.svg";
 
-const Container = tw.div`relative bg-primary-500 text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
+const Container = tw.div`relative text-gray-100 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
 const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
 const FiveColumns = tw.div`flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between -mt-12`;
 
@@ -49,50 +49,71 @@ const DecoratorBlob2 = tw(
 
 export default () => {
   return (
-    <Container>
-      <Content>
+    <Container style={{backgroundColor:'black'}}>
+      <Content style={{maxWidth:'1580px'}}>
         <FiveColumns>
           <Column>
-            <ColumnHeading>Main</ColumnHeading>
+            <ColumnHeading style={{fontSize:'25px'}}>ROTARY.ORG</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="#">Blog</Link>
+                <Link href="#">Turning wine bottles back into sand</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">FAQs</Link>
+                <Link href="#">Leveraging expertise with Ashoka</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Support</Link>
+                <Link href="#">Engagement through experiences</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">About Us</Link>
+                <Link href="#">Using district resource networks</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Leveraging expertise: Habitat for Humanity</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Leveraging expertise: Mediators Beyond Borders International</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Rotary Projects Around the Globe - November 2022</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Virtual Visit: Uganda club paying it forward with microloans</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">A capital destination</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Rotary members, Ukraine Friends deliver ambulances to Ukrainian officials</Link>
               </LinkListItem>
             </LinkList>
           </Column>
           <Column>
-            <ColumnHeading>Product</ColumnHeading>
+            <ColumnHeading style={{fontSize:'25px'}}>IMPORTANT LINKS</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="#">Log In</Link>
+                <Link href="#">District Secretariat and Administration</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Personal</Link>
+                <Link href="#">Assistant Governor's</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Business</Link>
+                <Link href="#">Document Center</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Team</Link>
+                <Link href="#">E-Bulletin</Link>
+              </LinkListItem>
+              <LinkListItem>
+                <Link href="#">Rotary Action Group- Addiction & Prevention</Link>
               </LinkListItem>
             </LinkList>
           </Column>
           <Column>
-            <ColumnHeading>Press</ColumnHeading>
+            <ColumnHeading style={{fontSize:'25px'}}>WEBSITE VISITORS</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="#">Logos</Link>
+                <Link href="#" style={{fontSize:'35px'}}>62034</Link>
               </LinkListItem>
-              <LinkListItem>
+              {/* <LinkListItem>
                 <Link href="#">Events</Link>
               </LinkListItem>
               <LinkListItem>
@@ -100,10 +121,10 @@ export default () => {
               </LinkListItem>
               <LinkListItem>
                 <Link href="#">Office</Link>
-              </LinkListItem>
+              </LinkListItem> */}
             </LinkList>
           </Column>
-          <Column>
+          {/* <Column>
             <ColumnHeading>Team</ColumnHeading>
             <LinkList>
               <LinkListItem>
@@ -136,9 +157,9 @@ export default () => {
                 <Link href="#">Disclaimer</Link>
               </LinkListItem>
             </LinkList>
-          </Column>
+          </Column> */}
         </FiveColumns>
-        <Divider />
+        {/* <Divider />
         <ThreeColRow>
           <LogoContainer>
             <LogoImg src={LogoImage} />
@@ -156,12 +177,12 @@ export default () => {
               <YoutubeIcon />
             </SocialLink>
           </SocialLinksContainer>
-        </ThreeColRow>
+        </ThreeColRow> */}
       </Content>
-      <DecoratorBlobContainer>
+      {/* <DecoratorBlobContainer>
         <DecoratorBlob1 />
         <DecoratorBlob2 />
-      </DecoratorBlobContainer>
+      </DecoratorBlobContainer> */}
     </Container>
   );
 };

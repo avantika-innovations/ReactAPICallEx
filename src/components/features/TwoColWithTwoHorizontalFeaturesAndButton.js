@@ -124,19 +124,19 @@ export default ({
             </Description>
             <Features>
               
-                <Feature>
+                {/* <Feature>
                   <FeatureHeadingContainer>
                     <FeatureIconContainer
-                      // iconFilled={iconFilled}
-                      // iconRoundedFull={iconRoundedFull}
-                      // css={feature.iconContainerCss || iconContainerCss}
+                      iconFilled={iconFilled}
+                      iconRoundedFull={iconRoundedFull}
+                      css={feature.iconContainerCss || iconContainerCss}
                     >
                       
                     </FeatureIconContainer>
                     <FeatureHeading></FeatureHeading>
                   </FeatureHeadingContainer>
                   <FeatureDescription></FeatureDescription>
-                </Feature>
+                </Feature> */}
             </Features>
 
             {/* <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>

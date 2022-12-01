@@ -57,7 +57,7 @@ export default ({ roundedHeaderButton }) => {
       
         <nav className="navbar navbar-expand-lg shadow-md py-2 relative flex items-center w-full justify-between mt-5" style={{paddingLeft:'auto',paddingRight:'auto'}}>
           <div className="px-6 w-full flex flex-wrap items-center justify-between" style={{float:'left'}}>
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <button
                 className="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
                 type="button"
@@ -71,6 +71,7 @@ export default ({ roundedHeaderButton }) => {
                   aria-hidden="true"
                   focusable="false"
                   data-prefix="fas"
+                  data-icon="caret-down"
                   className="w-5"
                   role="img"
                   xmlns="http://www.w3.org/2000/svg"
@@ -82,14 +83,14 @@ export default ({ roundedHeaderButton }) => {
                   ></path>
                 </svg>
               </button>
-            </div>
+            </div> */}
             <div className="navbar-collapse grow items-center" id="navbarSupportedContentY">
-              <ul className="navbar-nav mr-auto lg:flex lg:flex-row" style={{marginLeft:'auto'}}>
+              <ul className="navbar-nav mr-auto lg:flex lg:flex-row" style={{marginLeft:'auto',fontWeight:'bold'}}>
 
                 <li className="nav-item">
                   {/* <a className="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" >Home</a> */}
                   {/* <a href="#!" className="underline decoration-transparent hover:decoration-inherit transition duration-300 ease-in-out">A link with underline on hover</a> */}
-                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Homepage</button>
+                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out" style={{fontWeight:'bold',color:'#4054b2'}}>Homepage</button>
                   
                 </li>
 
@@ -97,7 +98,7 @@ export default ({ roundedHeaderButton }) => {
                   <div className="dropdown relative"> 
                     <a className="text-gray-500 hover:text-gray-700  focus:text-gray-700  mr-4  dropdown-toggle  hidden-arrow  flex items-center " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       
-                      <button type="button" className=" px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">District</button>
+                      <button type="button" className=" px-6 py-2.5 bg-transparent font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 transition duration-300 ease-in-out" style={{fontWeight:'bold',color:'#4054b2',display:'flex'}}>District
                         <svg
                           aria-hidden="true"
                           focusable="false"
@@ -107,15 +108,16 @@ export default ({ roundedHeaderButton }) => {
                           role="img"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 320 512"
+                          style={{marginLeft:'15px'}}
                         >
                           <path
                             fill="currentColor"
                             d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
                           ></path>
                         </svg>
-                      
-                      </a>
-                      <ul className=" dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  bg-clip-padding  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
+                        </button>
+                    </a>
+                      <ul className="dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
                         <li>
                           <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
                             District Committee
@@ -145,23 +147,24 @@ export default ({ roundedHeaderButton }) => {
                   <div className="dropdown relative">
                     <a className="text-gray-500 hover:text-gray-700  focus:text-gray-700  mr-4  dropdown-toggle  hidden-arrow  flex items-center " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       
-                    <button type="button" className=" w-100 inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">GML</button>
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="caret-down"
-                        className="w-2"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 320 512"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-                        ></path>
-                      </svg>
-                      
+                      <button type="button" className=" w-100 inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out" style={{fontWeight:'bold',color:'#4054b2',display:'flex'}}>GML
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fas"
+                          data-icon="caret-down"
+                          className="w-2"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 320 512"
+                          style={{marginLeft:'15px'}}
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                          ></path>
+                        </svg>
+                      </button>
                     </a>
                       <ul className=" dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  bg-clip-padding  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
                         <li>
@@ -191,22 +194,24 @@ export default ({ roundedHeaderButton }) => {
                   <div className="dropdown relative">
                     <a className="text-gray-500 hover:text-gray-700  focus:text-gray-700  mr-4  dropdown-toggle  hidden-arrow  flex items-center " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       
-                    <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Rotary Areas of Focus</button>
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fas"
-                      data-icon="caret-down"
-                      className="w-2"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 320 512"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-                      ></path>
-                    </svg>
+                      <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out" style={{fontWeight:'bold',color:'#4054b2',display:'flex'}}>Rotary Areas of Focus
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fas"
+                          data-icon="caret-down"
+                          className="w-2"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 320 512"
+                          style={{marginLeft:'15px'}}
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                          ></path>
+                        </svg>
+                      </button>
                     </a>
                       <ul className=" dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  bg-clip-padding  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
                         <li>
@@ -250,25 +255,27 @@ export default ({ roundedHeaderButton }) => {
 
                 <li className="nav-item mb-2 lg:mb-0">
                   <div className="dropdown relative">
-                    <links className="text-gray-500 hover:text-gray-700  focus:text-gray-700  mr-4  dropdown-toggle  hidden-arrow  flex items-center " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a className="text-gray-500 hover:text-gray-700  focus:text-gray-700  mr-4  dropdown-toggle  hidden-arrow  flex items-center " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       
-                      <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Partners in Service</button>
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="caret-down"
-                        className="w-2"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 320 512"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-                        ></path>
-                      </svg>
-                    </links>
+                      <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out" style={{fontWeight:'bold',color:'#4054b2',display:'flex'}}>Partners in Service
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fas"
+                          data-icon="caret-down"
+                          className="w-2"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 320 512"
+                          style={{marginLeft:'15px'}}
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </a>
                       <ul className=" dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  bg-clip-padding  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
                         <li>
                           <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
@@ -302,29 +309,31 @@ export default ({ roundedHeaderButton }) => {
                 </li>
 
                 <li className="nav-item mb-2 lg:mb-0">
-                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Logo</button>
+                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out" style={{fontWeight:'bold',color:'#4054b2'}}>Logo</button>
                 </li>
 
                 <li className="nav-item mb-2 lg:mb-0">
                   <div className="dropdown relative">
                     <a className="text-gray-500 hover:text-gray-700  focus:text-gray-700  mr-4  dropdown-toggle  hidden-arrow  flex items-center " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       
-                    <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Club Websites</button>
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fas"
-                      data-icon="caret-down"
-                      className="w-2"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 320 512"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-                      ></path>
-                    </svg>
+                      <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out" style={{fontWeight:'bold',color:'#4054b2',display:'flex'}}>Club Websites
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fas"
+                          data-icon="caret-down"
+                          className="w-2"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 320 512"
+                          style={{marginLeft:'15px'}}
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                          ></path>
+                        </svg>
+                      </button>
                     </a>
                       <ul className=" dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  bg-clip-padding  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
                         <li>
@@ -367,15 +376,53 @@ export default ({ roundedHeaderButton }) => {
                 </li>
 
                 <li className="nav-item mb-2 lg:mb-0">
-                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Projects</button>
+                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out" style={{fontWeight:'bold',color:'#4054b2'}}>Projects</button>
                 </li>
 
                 <li className="nav-item mb-2 lg:mb-0">
-                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Rotary Year 2023-24</button>
+                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out" style={{fontWeight:'bold',color:'#4054b2'}}>Rotary Year 2023-24</button>
                 </li>
 
                 <li className="nav-item mb-2 lg:mb-0">
-                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out">Contact Us</button>
+                  <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out" style={{fontWeight:'bold',color:'#4054b2'}}>Contact Us</button>
+                </li>
+
+
+
+
+                <li className="nav-item">
+                  <div className="dropdown relative"> 
+                    <a className="text-gray-500 hover:dropdown-menu  focus:dropdown-menu  mr-4  dropdown-toggle  hidden-arrow  flex items-center " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      
+                      <button type="button" className=" px-6 py-2.5 bg-transparent font-medium text-xs leading-tight uppercase rounded hover:visible transition duration-300 ease-in-out" style={{fontWeight:'bold',color:'#4054b2',display:'flex'}} >District
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fas"
+                          data-icon="caret-down"
+                          className="w-2"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 320 512"
+                          style={{marginLeft:'15px'}}
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+                          ></path>
+                        </svg>
+                        </button>
+                    </a>
+                      <ul className="dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
+                            District Committee
+                          </a>
+                        </li>
+                        
+                        
+                      </ul>
+                  </div>
                 </li>
               </ul>
             </div>

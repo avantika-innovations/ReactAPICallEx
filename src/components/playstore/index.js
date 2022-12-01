@@ -5,7 +5,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-9.svg";
 import { ContentWithPaddingXl, Container } from "components/misc/Layouts";
 
-const PrimaryBackgroundContainer = tw.div`py-20 lg:py-24 bg-primary-500 rounded-lg relative`
+const PrimaryBackgroundContainer = tw.div`py-20 lg:py-24 rounded-lg relative`
 const Row = tw.div`px-8 max-w-screen-lg mx-auto flex items-center relative z-10 flex-col lg:flex-row text-center lg:text-left`;
 
 const ColumnContainer = tw.div`lg:w-1/2 max-w-lg`
@@ -35,34 +35,20 @@ export default ({
   return (
     <Container css={pushDownFooter && tw`mb-20 lg:mb-24`} style={{marginBottom:0}}>
       <ContentWithPaddingXl style={{maxWidth:'none',padding:0}}>
-      <PrimaryBackgroundContainer style={{color:'white'}}>
-        {/* <h2 style={{textAlign:'center',fontWeight:'bold',marginBottom:'20px'}}>OUR MILESTONES</h2> */}
-        <Text style={{textAlign:'center',fontWeight:'bold',marginBottom:'20px',fontSize:'25px',color:'chartreuse'}}>OUR MILESTONES</Text>
-        <Row style={{textAlign:'center',maxWidth:'none',justifyContent:'center'}}> 
-          <TextContainer>
-            <Text style={{fontSize:'75px'}}>3,640</Text>
-            <Text style={{color:'violet'}}>{text}</Text>
-          </TextContainer>
-          <TextContainer>
-          <Text style={{fontSize:'75px'}}>31</Text>
-            <Text style={{color:'tan'}}>{text1}</Text>
-          </TextContainer>
-          <TextContainer>
-          <Text style={{fontSize:'75px'}}>107</Text>
-            <Text style={{color:'plum'}}>{text2}</Text>
-          </TextContainer>
-          
-          {/* <LinksContainer>
-            <PrimaryLink href={primaryLinkUrl}>{primaryLinkText}{text1}</PrimaryLink>
-            <SecondaryLink href={secondaryLinkUrl}>{secondaryLinkText}</SecondaryLink>
-          </LinksContainer> */}
-        </Row>
-        <h3 style={{textAlign:'center',fontWeight:'bold',marginTop:'20px'}}>AS ON 30TH NOVEMBER 2022</h3>
-        {/* <DecoratorBlobContainer>
-          <DecoratorBlob1/>
-          <DecoratorBlob2/>
-        </DecoratorBlobContainer> */}
-      </PrimaryBackgroundContainer>
+        <PrimaryBackgroundContainer style={{color:'black'}}>
+            <div className="" style={{display:'flex',maxWidth:'750px',marginRight:'auto',marginLeft:'auto'}}>
+                <Text style={{textAlign:'center',fontWeight:'bold',marginBottom:'20px',fontSize:'45px',color:'black'}}>DOWNLOAD OUR OFFICIAL DISTRICT APP</Text>   
+                <img width="226" height="131" src="https://www.rid3240.org/new/wp-content/uploads/2020/07/rid3240.jpg" class="attachment-large size-large" alt="" loading="lazy"/>
+            </div>
+            <Row style={{textAlign:'center',maxWidth:'none',justifyContent:'center'}}> 
+                <TextContainer>     
+                    <img style={{float:'right'}} width="246" height="150" src="https://www.rid3240.org/new/wp-content/uploads/2020/06/en_badge_web_generic.png" class="attachment-large size-large" alt="" loading="lazy"/>
+                </TextContainer>
+                <TextContainer>
+                    <img width="224" height="154" src="https://www.rid3240.org/new/wp-content/uploads/2020/07/0_1-msaTEYYCzIXAYC_-1024x354.png" class="attachment-large size-large" alt="" loading="lazy"/>
+                </TextContainer>
+            </Row>
+        </PrimaryBackgroundContainer>
       </ContentWithPaddingXl>
     </Container>
   );

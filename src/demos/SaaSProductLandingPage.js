@@ -17,6 +17,7 @@ import macHeroScreenshotImageSrc from "images/hero-screenshot-2.png";
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
 import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
+import Playstore from "components/playstore";
 
 export default () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
@@ -61,84 +62,84 @@ export default () => {
             <HighlightedText>ROTARY INTERNATIONAL DISTRICT 3240</HighlightedText>
           </>
         }
-        imageSrc={prototypeIllustrationImageSrc}
-        showDecoratorBlob={false}
-        features={[
-          {
-            Icon: MoneyIcon,
-            title: "Affordable",
-            description: "We promise to offer you the best rate we can - at par with the industry standard.",
-            iconContainerCss: tw`bg-green-300 text-green-800`
-          },
-          {
-            Icon: BriefcaseIcon,
-            title: "Professionalism",
-            description: "We assure you that our templates are designed and created by professional designers.",
-            iconContainerCss: tw`bg-red-300 text-red-800`
-          }
-        ]}
+        // imageSrc={prototypeIllustrationImageSrc}
+        // showDecoratorBlob={false}
+        // features={[
+        //   {
+        //     Icon: MoneyIcon,
+        //     title: "Affordable",
+        //     description: "We promise to offer you the best rate we can - at par with the industry standard.",
+        //     iconContainerCss: tw`bg-green-300 text-green-800`
+        //   },
+        //   {
+        //     Icon: BriefcaseIcon,
+        //     title: "Professionalism",
+        //     description: "We assure you that our templates are designed and created by professional designers.",
+        //     iconContainerCss: tw`bg-red-300 text-red-800`
+        //   }
+        // ]}
       />
       <Pricing
-        subheading={<Subheading>Pricing</Subheading>}
+        // subheading={<Subheading>Pricing</Subheading>}
         heading={
           <>
-            Reasonable & Flexible <HighlightedText>Plans.</HighlightedText>
+            JOIN US
           </>
         }
-        plans={[
-          {
-            name: "Personal",
-            price: "$17.99",
-            duration: "Monthly",
-            mainFeature: "For Individuals",
-            features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"]
-          },
-          {
-            name: "Business",
-            price: "$37.99",
-            duration: "Monthly",
-            mainFeature: "For Small Businesses",
-            features: ["60 Templates", "15 Landing Pages", "22 Internal Pages", "Priority Assistance"],
-            featured: true
-          },
-          {
-            name: "Enterprise",
-            price: "$57.99",
-            duration: "Monthly",
-            mainFeature: "For Large Companies",
-            features: ["90 Templates", "27 Landing Pages", "37 Internal Pages", "Personal Assistance"]
-          }
-        ]}
+        // plans={[
+        //   {
+        //     name: "Personal",
+        //     price: "$17.99",
+        //     duration: "Monthly",
+        //     mainFeature: "For Individuals",
+        //     features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"]
+        //   },
+        //   {
+        //     name: "Business",
+        //     price: "$37.99",
+        //     duration: "Monthly",
+        //     mainFeature: "For Small Businesses",
+        //     features: ["60 Templates", "15 Landing Pages", "22 Internal Pages", "Priority Assistance"],
+        //     featured: true
+        //   },
+        //   {
+        //     name: "Enterprise",
+        //     price: "$57.99",
+        //     duration: "Monthly",
+        //     mainFeature: "For Large Companies",
+        //     features: ["90 Templates", "27 Landing Pages", "37 Internal Pages", "Personal Assistance"]
+        //   }
+        // ]}
       />
       <Testimonial
-        subheading={<Subheading>Testimonials</Subheading>}
+        subheading={<Subheading>OUR MOTTO</Subheading>}
         heading={
           <>
-            Our Clients <HighlightedText>Love Us.</HighlightedText>
+             " SERVICE ABOVE SELF "
           </>
         }
-        testimonials={[
-          {
-            stars: 5,
-            profileImageSrc:
-              "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
-            heading: "Amazing User Experience",
-            quote:
-              "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-            customerName: "Charlotte Hale",
-            customerTitle: "Director, Delos Inc."
-          },
-          {
-            stars: 5,
-            profileImageSrc:
-              "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
-            heading: "Love the Developer Experience and Design Principles !",
-            quote:
-              "Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-            customerName: "Adam Cuppy",
-            customerTitle: "Founder, EventsNYC"
-          }
-        ]}
+        // testimonials={[
+        //   {
+        //     stars: 5,
+        //     profileImageSrc:
+        //       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
+        //     heading: "Amazing User Experience",
+        //     quote:
+        //       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        //     customerName: "Charlotte Hale",
+        //     customerTitle: "Director, Delos Inc."
+        //   },
+        //   {
+        //     stars: 5,
+        //     profileImageSrc:
+        //       "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
+        //     heading: "Love the Developer Experience and Design Principles !",
+        //     quote:
+        //       "Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+        //     customerName: "Adam Cuppy",
+        //     customerTitle: "Founder, EventsNYC"
+        //   }
+        // ]}
       />
       {/* <FAQ
         subheading={<Subheading>FAQS</Subheading>}
@@ -181,6 +182,7 @@ export default () => {
         ]}
       /> */}
       <GetStarted/>
+      <Playstore/>
       <Footer />
     </AnimationRevealPage>
   );

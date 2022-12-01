@@ -11,7 +11,7 @@ import { ReactComponent as StarIconBase } from "images/star-icon.svg";
 import { ReactComponent as ArrowLeftIcon } from "images/arrow-left-3-icon.svg";
 import { ReactComponent as ArrowRightIcon } from "images/arrow-right-3-icon.svg";
 
-const Row = tw.div`flex flex-col md:flex-row justify-between items-center`;
+// const Row = tw.div`flex flex-col md:flex-row justify-between items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(Column)`md:w-5/12 xl:w-6/12 flex-shrink-0 relative`;
 const TextColumn = styled(Column)(props => [
@@ -29,7 +29,7 @@ const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(
   SectionHeading
 )`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
-const Description = tw.p`mt-6 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
+const Description = tw.p`mt-6 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed `;
 
 const TestimonialSlider = styled(Slider)`
   ${tw`w-full mt-10 text-center md:text-left`}
@@ -103,17 +103,17 @@ export default ({
   const [sliderRef, setSliderRef] = useState(null);
 
   return (
-    <Container>
+    <Container style={{backgroundColor:'black'}}>
       <ContentWithPaddingXl>
-        <Row>
-          <ImageColumn>
+        {/* <Row> */}
+          {/* <ImageColumn>
             <Image src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
-          </ImageColumn>
-          <TextColumn textOnLeft={textOnLeft}>
-            <Subheading>{subheading}</Subheading>
-            <Heading>{heading}</Heading>
-            <Description>{description}</Description>
-            <TestimonialSlider arrows={false} ref={setSliderRef}>
+          </ImageColumn> */}
+          <TextColumn textOnLeft={textOnLeft} style={{color:'white',width:'100%'}}>
+            <Subheading>OUR MOTTO</Subheading>
+            <Heading style={{fontSize:'7rem',marginRight:'550px'}}><i className="fas fa-quote-left" style={{marginRight:'35px'}}></i>SERVICE ABOVE SELF<i className="fas fa-quote-right" style={{marginLeft:'35px'}}></i></Heading>
+            <Description style={{textAlign:'right',marginLeft:'550px'}}>Your generosity makes our work possible. Whether you contribute financially or as advocate for good, you make a real and lasting difference in people’s lives.</Description>
+            {/* <TestimonialSlider arrows={false} ref={setSliderRef}>
               {testimonials.map((testimonial, index) => (
                 <Testimonial key={index}>
                   <StarsContainer>
@@ -143,9 +143,9 @@ export default ({
                   </CustomerInfoAndControlsContainer>
                 </Testimonial>
               ))}
-            </TestimonialSlider>
+            </TestimonialSlider> */}
           </TextColumn>
-        </Row>
+        {/* </Row> */}
       </ContentWithPaddingXl>
     </Container>
   );

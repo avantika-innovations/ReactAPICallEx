@@ -30,8 +30,8 @@ export const NavLink = tw.a`
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-5
-  px-8 py-3 rounded bg-primary-500 text-gray-100
-  hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline
+  px-8 py-3 rounded bg-blue-700 text-gray-100
+  hocus:bg-blue-800 hocus:text-gray-200 focus:shadow-outline
   border-b-0
 `;
 
@@ -79,7 +79,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
     
     <NavLinks key={1} style={{display:'flex'}}>
 
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#" >Reporting CMR</PrimaryLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#" style={{backgroundColor:'4054B2'}}>Reporting CMR</PrimaryLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Exchange Rate</PrimaryLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Rotary India</PrimaryLink>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">RID3420 Rotary India</PrimaryLink>

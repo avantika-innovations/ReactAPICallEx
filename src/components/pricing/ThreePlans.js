@@ -8,7 +8,7 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { ReactComponent as SvgDecoratorBlob } from "images/svg-decorator-blob-6.svg";
 
-const HeaderContainer = tw.div`mt-10 w-full flex flex-col items-center`;
+const HeaderContainer = tw.div` w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4`;
 const Heading = tw(SectionHeading)`w-full`;
 const Description = tw(SectionDescription)`w-full text-center`;
@@ -83,8 +83,8 @@ const DecoratorBlob = styled(SvgDecoratorBlob)`
 
 
 export default ({
-  subheading = "Pricing",
-  heading = "Flexible Plans.",
+  // subheading = "Pricing",
+  // heading = "Flexible Plans.",
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   plans = null,
   primaryButtonText = "Buy Now"
@@ -135,11 +135,19 @@ export default ({
     <Container>
       <ContentWithPaddingXl>
         <HeaderContainer>
-          {subheading && <Subheading>{subheading}</Subheading>}
-          <Heading>{heading}</Heading>
-          {description && <Description>{description}</Description>}
+          {/* {subheading && <Subheading>{subheading}</Subheading>} */}
+          <Heading style={{textShadow: '0 0 5px #fff, 0 0 10px #fff,  0 0 20px #913da1, 0 0 30px #80007c',
+          //  0 0 40px green, 0 0 55px green, 0 0 70px green'
+           }}>JOIN US</Heading>
+          <Description style={{maxWidth:'none'}}>Club activities, social events, and volunteer projects offer networking opportunities that build personal and professional connections. And Rotarian’s can extend those networks by visiting other clubs around the globe.</Description>
+          <button 
+                type="button" 
+                className=" mt-5 inline-block px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out"
+                style={{backgroundColor:'#d69e2e'}}>
+                 Learn More
+                </button>
         </HeaderContainer>
-        <PlansContainer>
+        {/* <PlansContainer>
           {plans.map((plan, index) => (
             <Plan key={index} featured={plan.featured}>
               {!plan.featured && <div className="planHighlight" css={highlightGradientsCss[index % highlightGradientsCss.length]} />}
@@ -162,7 +170,7 @@ export default ({
             </Plan>
           ))}
           <DecoratorBlob/>
-        </PlansContainer>
+        </PlansContainer> */}
       </ContentWithPaddingXl>
     </Container>
   );
