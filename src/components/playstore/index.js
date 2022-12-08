@@ -38,14 +38,14 @@ export default ({
         <PrimaryBackgroundContainer style={{color:'black'}}>
             <div className="" style={{display:'flex',maxWidth:'750px',marginRight:'auto',marginLeft:'auto'}}>
                 <Text style={{textAlign:'center',fontWeight:'bold',marginBottom:'20px',fontSize:'45px',color:'black'}}>DOWNLOAD OUR OFFICIAL DISTRICT APP</Text>   
-                <img width="226" height="131" src="https://www.rid3240.org/new/wp-content/uploads/2020/07/rid3240.jpg" class="attachment-large size-large" alt="" loading="lazy"/>
+                <img width="226" height="131" src="https://www.rid3240.org/new/wp-content/uploads/2020/07/rid3240.jpg" className="attachment-large size-large" alt="" loading="lazy"/>
             </div>
             <Row style={{textAlign:'center',maxWidth:'none',justifyContent:'center'}}> 
                 <TextContainer>     
                     <img style={{float:'right'}} width="246" height="150" src="https://www.rid3240.org/new/wp-content/uploads/2020/06/en_badge_web_generic.png" class="attachment-large size-large" alt="" loading="lazy"/>
                 </TextContainer>
                 <TextContainer>
-                    <img width="224" height="154" src="https://www.rid3240.org/new/wp-content/uploads/2020/07/0_1-msaTEYYCzIXAYC_-1024x354.png" class="attachment-large size-large" alt="" loading="lazy"/>
+                    <img width="224" height="154" src="https://www.rid3240.org/new/wp-content/uploads/2020/07/0_1-msaTEYYCzIXAYC_-1024x354.png" className="attachment-large size-large" alt="" loading="lazy"/>
                 </TextContainer>
             </Row>
         </PrimaryBackgroundContainer>
