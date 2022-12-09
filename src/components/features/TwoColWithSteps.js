@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
@@ -76,14 +78,127 @@ export default ({
   if (!steps) steps = defaultSteps;
 
   return (
+    <>
     <Container>
       <TwoColumn>
         <ImageColumn style={{height:'auto'}}>
-          <iframe width="100%" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
-          </iframe>
+          {/* <iframe width="100%" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+          </iframe> */}
+           {/* <div id="carouselExampleCrossfade" className="carousel slide carousel-fade relative mb-3" data-bs-ride="carousel">
+            <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+              <button type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCrossfade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div className="carousel-inner relative w-full">
+              <div className="carousel-item active float-left w-full">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"  width="100%" height="345" className="block w-full" alt="Wild Landscape"/>
+                 
+                
+              </div>
+              <div className="carousel-item float-left w-full">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"  width="100%" height="345" className="block w-full" alt="Camera"/>
+              </div>
+              <div className="carousel-item float-left w-full">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"  width="100%" height="345" className="block w-full" alt="Exotic Fruits"/>
+              </div>
+            </div>
+            
+          </div>
+          <div style={{display:'flex',width:'100%',justifyContent:'center',padding:'25px'}}>
+            <button
+            className="rounded-full carousel-control-prev bottom-0 flex items-center justify-center p-0 text-center border-0  left-0"
+            type="button"
+            data-bs-target="#carouselExampleCrossfade"
+            data-bs-slide="prev" 
+            style={{top:'auto',backgroundColor:'rgb(12, 63, 116)',marginLeft:'20px',padding:'20px',opacity:'1'}}
+            >
+            <span className="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="rounded-full carousel-control-next bottom-0 flex items-center justify-center p-0 text-center border-0  right-0"
+            type="button"
+            data-bs-target="#carouselExampleCrossfade"
+            data-bs-slide="next" 
+            style={{top:'auto',backgroundColor:'rgb(12, 63, 116)',marginLeft:'20px',padding:'20px',opacity:'1'}}
+            >
+            <span className="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div> */}
+
+
+
+        <div id="carouselExampleCaptions" className="carousel slide relative" data-bs-ride="carousel">
+            
+            <div className="carousel-inner relative w-full overflow-hidden">
+              <div className="carousel-item active relative float-left w-full ">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"  width="100%" height="345" className="block w-full" alt="..."/>
+                <div className="carousel-caption hidden md:block absolute text-center">
+                  <h5 className="text-xl">Title 1</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div className="carousel-item relative float-left w-full">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"  width="100%" height="345" className="block w-full" alt="..."/>
+                <div className="carousel-caption hidden md:block absolute text-center">
+                  <h5 className="text-xl">Title 2</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div className="carousel-item relative float-left w-full">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"  width="100%" height="345" className="block w-full" alt="..."/>
+                <div className="carousel-caption hidden md:block absolute text-center">
+                  <h5 className="text-xl">Title 3</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div style={{display:'flex',justifyContent:'space-between',padding:'25px'}}>
+              <div style={{display:'flex'}}>
+                <button
+                  className="carousel-control-prev bottom-0 px-2 py-1 text-center"
+                  // className="rounded-full carousel-control-prev bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="prev"
+                  style={{backgroundColor:'rgb(214, 158, 46)',opacity:'1',width:'auto',height:'fit-content'}}
+                >
+                  <span className="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                  <div className="carousel-indicators right-0 bottom-0 p-0 " style={{opacity:'1',display:'flex'}}>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" style={{opacity:'1',textAlign:'right',height:'auto'}}>1</button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" style={{opacity:'1',height:'auto',textAlign:'right'}}>2</button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" style={{opacity:'1',height:'auto',textAlign:'right'}}>3</button>
+                  </div>
+                <button
+                  className="carousel-control-next bottom-0 flex items-center justify-center px-2 py-1 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="next"
+                  style={{backgroundColor:'rgb(214, 158, 46)',opacity:'1',width:'auto'}}
+                >
+                  <span className="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div style={{margin:'auto 0',fontWeight:'bold'}}>
+                <a href="#" style={{}}>Read More</a>
+              </div>
+            </div>
+            
+          </div>
+          
         </ImageColumn>
-        <TextColumn textOnLeft={textOnLeft}>
-          <TextContent>
+        
+        
+        
+        <div className="divider" style={{left: '50%',top: '0',margin: '0 30px',borderLeft: '6px solid grey',borderImage: 'grey',height:'500px'}}></div>
+        <TextColumn textOnLeft={textOnLeft} style={{marginLeft:0}}>
+          <TextContent style={{marginLeft:0}}>
             {/* <Subheading>{subheading}</Subheading> */}
             <Heading>{heading}</Heading>
             <Steps>
@@ -96,5 +211,7 @@ export default ({
         </TextColumn>
       </TwoColumn>
     </Container>
+   
+    </>
   );
 };

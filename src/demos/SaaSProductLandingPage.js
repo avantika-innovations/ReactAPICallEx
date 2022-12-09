@@ -19,6 +19,7 @@ import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
 import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
 import Playstore from "components/playstore";
+import Districtleadercarousel from "components/district/districtleadercarousel";
 
 export default () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
@@ -27,21 +28,22 @@ export default () => {
   return (
     <AnimationRevealPage>
       <Hero roundedHeaderButton={true} />
-      <Features
-        // subheading={<Subheading>Features</Subheading>}
+      {/* <Features
+        subheading={<Subheading>Features</Subheading>}
         heading={
           <>
-            {/* We have Amazing <HighlightedText>Service.</HighlightedText> */}
-            District Leader 2022-23
+            We have Amazing <HighlightedText>Service.</HighlightedText>
+            MONTHLY MESSAGE OF JULY 2022
           </>
         }
-      />
-      <MainFeature
-        // subheading={<Subheading>ZONE6 : DISTRICT 3240</Subheading>}
+      /> */}
+      <Districtleadercarousel/>
+      {/* <MainFeature
+        subheading={<Subheading>ZONE6 : DISTRICT 3240</Subheading>}
         imageSrc={heroScreenshotImageSrc}
         imageBorder={true}
         imageDecoratorBlob={true}
-      />
+      /> */}
       <FeatureWithSteps
         // subheading={<Subheading>STEPS</Subheading>}
         heading={
@@ -55,31 +57,31 @@ export default () => {
         imageDecoratorBlob={true}
         decoratorBlobCss={tw`xl:w-40 xl:h-40 opacity-15 -translate-x-1/2 left-1/2`}
       />
-      <MainFeature2
-        // subheading={<Subheading>VALUES</Subheading>}
+      {/* <MainFeature2
+        subheading={<Subheading>VALUES</Subheading>}
         heading={
           <>
             ABOUT US
             <HighlightedText>ROTARY INTERNATIONAL DISTRICT 3240</HighlightedText>
           </>
         }
-        // imageSrc={prototypeIllustrationImageSrc}
-        // showDecoratorBlob={false}
-        // features={[
-        //   {
-        //     Icon: MoneyIcon,
-        //     title: "Affordable",
-        //     description: "We promise to offer you the best rate we can - at par with the industry standard.",
-        //     iconContainerCss: tw`bg-green-300 text-green-800`
-        //   },
-        //   {
-        //     Icon: BriefcaseIcon,
-        //     title: "Professionalism",
-        //     description: "We assure you that our templates are designed and created by professional designers.",
-        //     iconContainerCss: tw`bg-red-300 text-red-800`
-        //   }
-        // ]}
-      />
+        imageSrc={prototypeIllustrationImageSrc}
+        showDecoratorBlob={false}
+        features={[
+          {
+            Icon: MoneyIcon,
+            title: "Affordable",
+            description: "We promise to offer you the best rate we can - at par with the industry standard.",
+            iconContainerCss: tw`bg-green-300 text-green-800`
+          },
+          {
+            Icon: BriefcaseIcon,
+            title: "Professionalism",
+            description: "We assure you that our templates are designed and created by professional designers.",
+            iconContainerCss: tw`bg-red-300 text-red-800`
+          }
+        ]}
+      /> */}
       <Pricing
         // subheading={<Subheading>Pricing</Subheading>}
         heading={

@@ -83,39 +83,61 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
   if (!cards) cards = defaultCards;
 
   return (
-    
-    <Container style={{backgroundColor:'rgb(128 128 128/0.13)'}}>
-      <ThreeColumnContainer>
-        {/* {subheading && <Subheading>{subheading}</Subheading>} */}
-        <Heading>{heading}</Heading>
-        
-        {/* {description && <Description>{description}</Description>} */}
-        {/* <VerticalSpacer /> */}
-        {/* {cards.map((card, i) => (
-          <Column key={i}> */}
-            {/* <Card>
-              <span className="imageContainer">
-                <img src={card.imageSrc || defaultCardImage} alt="" />
-              </span>
-              <span className="textContainer">
-                <span className="title">{card.title || "Fully Secure"}</span>
-                <p className="description">
-                  {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
-                </p>
-              </span>
-            </Card> */}
-          {/* </Column>
-        ))} */}
-        <div className=" " >
-          <div className="flex" >
-            <div className="rounded-lg shadow-lg max-w-sm bg-white m-5" style={{textAlign:'center'}}>
-                {/* <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"> */}
-                  <img className="rounded-t-lg" src="../../../../images/p1.PNG" alt="" style={{display: 'block',marginLeft: 'auto',marginRight: 'auto'}}/>
-                {/* </a> */}
+    <>
+    {/* <h1 style={{textAlign:'center'}}>DISTRICT LEADER 2022-23</h1> */}
+      <Container style={{backgroundImage:"url('https://i.pinimg.com/originals/22/e2/2a/22e22a1e45bef25f8079823ca773a262.jpg')"}}>
+        <ThreeColumnContainer style={{padding:'20px 0'}}>
+          {/* {subheading && <Subheading>{subheading}</Subheading>} */}
+          <Heading>{heading}</Heading>
+          
+          {/* {description && <Description>{description}</Description>} */}
+          {/* <VerticalSpacer /> */}
+          {/* {cards.map((card, i) => (
+            <Column key={i}> */}
+              {/* <Card>
+                <span className="imageContainer">
+                  <img src={card.imageSrc || defaultCardImage} alt="" />
+                </span>
+                <span className="textContainer">
+                  <span className="title">{card.title || "Fully Secure"}</span>
+                  <p className="description">
+                    {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
+                  </p>
+                </span>
+              </Card> */}
+            {/* </Column>
+          ))} */}
+          <div className=" " >
+            <div className="flex" >
+              <div className="rounded-lg shadow-lg max-w-sm bg-white m-5" style={{textAlign:'center'}}>
+                  {/* <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light"> */}
+                    <img className="rounded-t-lg" src="../../../../images/p1.PNG" alt="" style={{display: 'block',marginLeft: 'auto',marginRight: 'auto'}}/>
+                  {/* </a> */}
+                  <div className="p-6">
+                    <h5 className="text-gray-900 text-xl font-medium mb-2">JENNIFER JONES</h5>
+                    <p className="text-gray-700 text-base mb-4">
+                      ROTARY INTERNATIONAL PRESIDENT
+                    </p>
+                    
+                    {/* <button type="button" className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read Message</button> */}
+                    <button 
+                    type="button" 
+                    className="inline-block px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out"
+                    style={{backgroundColor:'#d69e2e'}}>
+                      Read Message
+                    </button>
+                  </div>
+                  
+                </div>
+
+              <div className="rounded-lg shadow-lg bg-white max-w-sm m-5" style={{textAlign:'center'}}>
+                <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                  <img className="rounded-t-lg" src="../../../../images/p2.PNG" alt="" style={{display: 'block',marginLeft: 'auto',marginRight: 'auto'}}/>
+                </a>
                 <div className="p-6">
-                  <h5 className="text-gray-900 text-xl font-medium mb-2">JENNIFER JONES</h5>
+                  <h5 className="text-gray-900 text-xl font-medium mb-2">DR. KUSHANAVA PABI</h5>
                   <p className="text-gray-700 text-base mb-4">
-                    ROTARY INTERNATIONAL PRESIDENT
+                  DISTRICT GOVERNOR 2022-23
                   </p>
                   
                   {/* <button type="button" className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read Message</button> */}
@@ -126,40 +148,20 @@ export default ({ cards = null, heading = "Amazing Features", subheading = "Feat
                     Read Message
                   </button>
                 </div>
-                
               </div>
 
-            <div className="rounded-lg shadow-lg bg-white max-w-sm m-5" style={{textAlign:'center'}}>
-              <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-                <img className="rounded-t-lg" src="../../../../images/p2.PNG" alt="" style={{display: 'block',marginLeft: 'auto',marginRight: 'auto'}}/>
-              </a>
-              <div className="p-6">
-                <h5 className="text-gray-900 text-xl font-medium mb-2">DR. KUSHANAVA PABI</h5>
-                <p className="text-gray-700 text-base mb-4">
-                DISTRICT GOVERNOR 2022-23
-                </p>
-                
-                {/* <button type="button" className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read Message</button> */}
-                <button 
-                type="button" 
-                className="inline-block px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out"
-                style={{backgroundColor:'#d69e2e'}}>
-                  Read Message
-                </button>
-              </div>
+              
+
+              
             </div>
-
-            
-
-            
           </div>
-        </div>
 
-          
             
-          
-      </ThreeColumnContainer>
-      {/* <DecoratorBlob /> */}
-    </Container>
+              
+            
+        </ThreeColumnContainer>
+        {/* <DecoratorBlob /> */}
+      </Container>
+    </>
   );
 };

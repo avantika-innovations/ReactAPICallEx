@@ -479,6 +479,15 @@ export default ({ roundedHeaderButton }) => {
             </div>
           </div>
         </nav>
+
+        <nav className="navbar navbar-expand-lg py-2 flex text-center w-full justify-between" style={{padding:'10px 10px 10px 20px',backgroundColor:'aliceblue'}}>
+        
+        <h3 className="" style={{marginRight:'auto',marginLeft:'auto',fontWeight:'bold'}}>Notifications</h3>
+        <marquee width="80%" direction="left" height="auto">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </marquee>
+      
+        </nav>
       
       
       
@@ -486,109 +495,78 @@ export default ({ roundedHeaderButton }) => {
         <TwoColumn  >
             
           <LeftColumn style={{marginRight:'20px'}}>
-          <IllustrationContainer>
-               <div
-                  id="carouselDarkVariant"
-                  className="carousel slide carousel-fade carousel-dark relative"
-                  data-bs-ride="carousel"
-                  style={{padding:"20px"}}
-                >
-                  
-                  <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-                    <button
-                      data-bs-target="#carouselDarkVariant"
-                      data-bs-slide-to="0"
-                      className="active"
-                      aria-current="true"
-                      aria-label="Slide 1"
-                    ></button>
-                    <button
-                      data-bs-target="#carouselDarkVariant"
-                      data-bs-slide-to="1"
-                      aria-label="Slide 2"
-                    ></button>
-                    <button
-                      data-bs-target="#carouselDarkVariant"
-                      data-bs-slide-to="2"
-                      aria-label="Slide 3"
-                    ></button>
-                    <button
-                      data-bs-target="#carouselDarkVariant"
-                      data-bs-slide-to="3"
-                      aria-label="Slide 1"
-                    ></button>
-                  </div>
-
+            <IllustrationContainer>
+              {/* <div id="carouselDarkVariant" className="carousel slide carousel-dark relative" data-bs-ride="carousel" style={{padding:"20px"}}> */}
+              <div id="carouselDarkVariant" className="carousel slide carousel-fade carousel-dark relative" data-bs-ride="carousel" style={{padding:"20px"}}>
                 
-                  <div className="carousel-inner relative w-full overflow-hidden" style={{verticalAlign:'middle'}}>
-                    
+                {/* <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                  <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button data-bs-target="#carouselDarkVariant" data-bs-slide-to="3" aria-label="Slide 1"></button>
+                </div> */}
+                <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
+                  <div className="carousel-inner w-full overflow-hidden" style={{verticalAlign:'middle'}}> 
+                  {/* <div className="carousel-inner relative w-full overflow-hidden" style={{verticalAlign:'middle'}}>  */}
                     <div className="carousel-item active relative float-left w-full">
-                      <img
-                        src="../../../../images/rotary1.PNG"
-                        className="block w-full"
-                        alt="Motorbike Smoke"
-                      />
+                      <img src="../../../../images/rotary1.PNG" className="block w-full" alt="Motorbike Smoke"/>
                       <div className="carousel-caption hidden  text-center">
-                      
                       </div>
                     </div>
-
-                    
-                    <div className="carousel-item relative w-full">
-                      <img
-                        src="../../../../images/rotary2.PNG"
-                        className="block w-full"
-                        alt="Mountaintop"
-                      />
-                      <div className="carousel-caption hidden  text-center">
-                      
-                      </div>
-                    </div>
-
-                  
                     <div className="carousel-item relative float-left w-full">
-                      <img
-                        src="../../../../images/rotary3.PNG"
-                        className="block w-full"
-                        alt="Woman Reading a Book"
-                      />
+                      <img src="../../../../images/rotary2.PNG" className="block w-full" alt="Mountaintop"/>
+                      <div className="carousel-caption hidden  text-center">
+                      </div>
+                    </div>
+                    <div className="carousel-item relative float-left w-full">
+                      <img src="../../../../images/rotary3.PNG" className="block w-full" alt="Woman Reading a Book"/>
                       <div className="carousel-caption hidden  text-center">
                         
                       </div>
                     </div>
                     <div className="carousel-item relative float-left w-full">
-                      <img
-                        src="../../../../images/rotary4.PNG"
-                        className="block w-full"
-                        alt="Woman Reading a Book"
-                      />
+                      <img src="../../../../images/rotary4.PNG" className="block w-full" alt="Woman Reading a Book"/>
                       <div className="carousel-caption hidden  text-center">
-                        
                       </div>
                     </div>
                   </div>
-              
+                  <div style={{display:'flex',width:'100%',justifyContent:'center',padding:'25px'}}>
+                    <button
+                      // className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                      className="rounded-full flex "
+                      type="button"
+                      data-bs-target="#carouselDarkVariant"
+                      data-bs-slide="prev"
+                      style={{top:'auto',backgroundColor:'rgb(12, 63, 116)',marginLeft:'20px',padding:'20px'}}
+                    >
+                      {/* <span className="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true" style={{color:'white'}}></span> */}
+                      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16" style={{color:'white'}}>
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                      </svg>
+                      <span className="visually-hidden">Previous</span>
+                    </button>
+                    <div className="vl" style={{left: '50%',top: '0',margin: '0 15px',borderLeft: '6px solid',borderImage: 'grey'}}></div>
+                    <button
+                      className="rounded-full flex"
+                      type="button"
+                      data-bs-target="#carouselDarkVariant"
+                      data-bs-slide="next"
+                      style={{top:'auto',backgroundColor:'rgb(12, 63, 116)',marginRight:'20px',padding:'20px'}}
+                    >
+                      {/* <span className="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true" style={{color:'white'}}></span> */}
+                      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16" style={{color:'white'}}>
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                      <span className="visually-hidden">Next</span>
+                    </button>
+                  </div>
                 </div>
-                <button
-                    className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-                    type="button"
-                    data-bs-target="#carouselDarkVariant"
-                    data-bs-slide="prev"
-                  >
-                    <span className="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    className="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-                    type="button"
-                    data-bs-target="#carouselDarkVariant"
-                    data-bs-slide="next"
-                  >
-                    <span className="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                  </button>
-             </IllustrationContainer>
+              </div>
+              
+            </IllustrationContainer>
+            
           </LeftColumn>
+          
            <RightColumn style={{textAlign:'center'}}>
            <Heading>
               ROTARY INTERNATIONAL
