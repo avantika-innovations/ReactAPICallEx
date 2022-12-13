@@ -154,11 +154,11 @@ export default ({
             </TestimonialSlider>
             <Controls style={{}}>
                 <ControlButton onClick={sliderRef?.slickPrev}>
-                  <ArrowLeftIcon />
+                  <ArrowLeftIcon style={{color:'rgb(12, 63, 116)'}}/>
                 </ControlButton>
                 <div className="divider" />
                 <ControlButton onClick={sliderRef?.slickNext}>
-                  <ArrowRightIcon />
+                  <ArrowRightIcon  style={{color:'rgb(12, 63, 116)'}}/>
                 </ControlButton>
               </Controls>
           </TextColumn>

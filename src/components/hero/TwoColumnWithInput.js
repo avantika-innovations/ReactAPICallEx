@@ -107,7 +107,7 @@ export default ({ roundedHeaderButton }) => {
       </nav>
       <Header roundedHeaderButton={roundedHeaderButton} />
       
-        <nav className="navbar navbar-expand-lg py-2 mt-5" style={{paddingLeft:'auto',paddingRight:'auto',boxShadow:'0 0 10px #80808085'}}>
+        <nav className="navbar navbar-expand-lg py-2 mt-5 relative" style={{paddingLeft:'auto',paddingRight:'auto',boxShadow:'0 0 10px #80808085'}}>
         {/* <nav className="navbar navbar-expand-lg py-2 relative flex items-center w-full justify-between mt-5" style={{paddingLeft:'auto',paddingRight:'auto',boxShadow:'0 0 10px #80808085'}}> */}
           <div className="px-6 " style={{}}>
             {/* <div className="flex items-center">
@@ -475,23 +475,23 @@ export default ({ roundedHeaderButton }) => {
                   <div className="carousel-inner w-full overflow-hidden" style={{verticalAlign:'middle'}}> 
                   {/* <div className="carousel-inner relative w-full overflow-hidden" style={{verticalAlign:'middle'}}>  */}
                     <div className="carousel-item active relative float-left w-full">
-                      <img src="../../../../images/rotary1.PNG" className="block w-full" alt="Motorbike Smoke"/>
+                      <img src="../../../../images/rotary1.PNG" className="block w-full rounded-lg" alt="Motorbike Smoke"/>
                       <div className="carousel-caption hidden  text-center">
                       </div>
                     </div>
                     <div className="carousel-item relative float-left w-full">
-                      <img src="../../../../images/rotary2.PNG" className="block w-full" alt="Mountaintop"/>
+                      <img src="../../../../images/rotary2.PNG" className="block w-full rounded-lg" alt="Mountaintop"/>
                       <div className="carousel-caption hidden  text-center">
                       </div>
                     </div>
                     <div className="carousel-item relative float-left w-full">
-                      <img src="../../../../images/rotary3.PNG" className="block w-full" alt="Woman Reading a Book"/>
+                      <img src="../../../../images/rotary3.PNG" className="block w-full rounded-lg" alt="Woman Reading a Book"/>
                       <div className="carousel-caption hidden  text-center">
                         
                       </div>
                     </div>
                     <div className="carousel-item relative float-left w-full">
-                      <img src="../../../../images/rotary4.PNG" className="block w-full" alt="Woman Reading a Book"/>
+                      <img src="../../../../images/rotary4.PNG" className="block w-full rounded-lg" alt="Woman Reading a Book"/>
                       <div className="carousel-caption hidden  text-center">
                       </div>
                     </div>

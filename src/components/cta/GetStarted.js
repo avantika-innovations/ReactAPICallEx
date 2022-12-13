@@ -62,9 +62,9 @@ export default ({
               
               
             </div>
-            <div className="p-5 rounded" style={{backgroundColor:'white',border:'3px solid rgb(12, 63, 116)'}}>
+            <div className="p-5 rounded-lg" style={{backgroundColor:'white',border:'3px solid rgb(12, 63, 116)'}}>
               <Text style={{color:'rgb(12, 63, 116)',marginBottom:'5px'}}>{text}</Text>
-              <p style={{color:'grey',textAlign:'left'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              {/* <p style={{color:'grey',textAlign:'left'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> */}
             </div>
             
            
@@ -85,9 +85,9 @@ export default ({
               </svg>
               
             </div>
-            <div className="p-4 rounded" style={{backgroundColor:'white',border:'3px solid rgb(214, 158, 46)'}}>
+            <div className="p-4 rounded-lg" style={{backgroundColor:'white',border:'3px solid rgb(214, 158, 46)'}}>
               <Text style={{color:'rgb(214, 158, 46)'}}>{text1}</Text>
-              <p style={{color:'grey',textAlign:'left'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              {/* <p style={{color:'grey',textAlign:'left'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> */}
             </div>
           </TextContainer>
           <TextContainer className="mb-5" style={{}}>
@@ -114,9 +114,9 @@ export default ({
                 </svg>
                 
               </div>
-              <div className="p-4 rounded" style={{backgroundColor:'white',border:'3px solid rgb(173 18 95)'}}>
+              <div className="p-4 rounded-lg" style={{backgroundColor:'white',border:'3px solid rgb(173 18 95)'}}>
               <Text style={{color:'rgb(173 18 95)'}}>{text2}</Text>
-              <p style={{color:'grey',textAlign:'left'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              {/* <p style={{color:'grey',textAlign:'left'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> */}
             </div>
             
           </TextContainer>

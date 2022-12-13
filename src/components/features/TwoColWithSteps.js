@@ -134,21 +134,21 @@ export default ({
             
             <div className="carousel-inner relative w-full overflow-hidden">
               <div className="carousel-item active relative float-left w-full ">
-                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"  width="100%" height="345" className="block w-full" alt="..."/>
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"  width="100%" height="385" className="block w-full" alt="..."/>
                 <div className="carousel-caption hidden md:block absolute text-center">
                   <h5 className="text-xl">Title 1</h5>
                   <p>Some representative placeholder content for the first slide.</p>
                 </div>
               </div>
               <div className="carousel-item relative float-left w-full">
-                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"  width="100%" height="345" className="block w-full" alt="..."/>
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"  width="100%" height="385" className="block w-full" alt="..."/>
                 <div className="carousel-caption hidden md:block absolute text-center">
                   <h5 className="text-xl">Title 2</h5>
                   <p>Some representative placeholder content for the second slide.</p>
                 </div>
               </div>
               <div className="carousel-item relative float-left w-full">
-                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"  width="100%" height="345" className="block w-full" alt="..."/>
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"  width="100%" height="385" className="block w-full" alt="..."/>
                 <div className="carousel-caption hidden md:block absolute text-center">
                   <h5 className="text-xl">Title 3</h5>
                   <p>Some representative placeholder content for the third slide.</p>
@@ -196,7 +196,7 @@ export default ({
         
         
         
-        <div className="divider" style={{left: '50%',top: '0',margin: '0 30px',borderLeft: '6px solid grey',borderImage: 'grey',height:'500px'}}></div>
+        <div className="divider" style={{left: '50%',top: '0',margin: '0 30px',borderLeft: '6px solid rgb(12, 63, 116)',borderImage: 'grey',height:'500px'}}></div>
         <TextColumn textOnLeft={textOnLeft} style={{marginLeft:0}}>
           <TextContent style={{marginLeft:0}}>
             {/* <Subheading>{subheading}</Subheading> */}
