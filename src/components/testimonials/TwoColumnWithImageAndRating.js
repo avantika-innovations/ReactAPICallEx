@@ -3,15 +3,16 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { css } from "styled-components/macro"; //eslint-disable-line
+import { css } from "styled-components/macro"; 
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import loveIllustrationImageSrc from "images/love-illustration.svg";
 import { ReactComponent as StarIconBase } from "images/star-icon.svg";
 import { ReactComponent as ArrowLeftIcon } from "images/arrow-left-3-icon.svg";
 import { ReactComponent as ArrowRightIcon } from "images/arrow-right-3-icon.svg";
+import "../../style.css"
 
-// const Row = tw.div`flex flex-col md:flex-row justify-between items-center`;
+const Row = tw.div`flex flex-col md:flex-row justify-between items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(Column)`md:w-5/12 xl:w-6/12 flex-shrink-0 relative`;
 const TextColumn = styled(Column)(props => [
@@ -104,15 +105,57 @@ export default ({
 
   return (
     <Container style={{backgroundColor:'black'}}>
-      <ContentWithPaddingXl>
-        {/* <Row> */}
-          {/* <ImageColumn>
-            <Image src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} />
-          </ImageColumn> */}
+      <ContentWithPaddingXl style={{}}>
+        <Row>
+          <ImageColumn>
+            <div className="" style={{display:'flex',justifyContent:'center',width:'100%'}}>
+              
+                {/* <Image src="../../../../images/r4copy.jpg" className="rounded-lg m-1"  style={{maxWidth:'200px',maxHeight:'133px'}}/> */}
+                
+                <div className="example">
+                <Image src="../../../../images/r4copy.jpg" className="rounded-lg m-1" alt="tree"  style={{width:'200px',maxHeight:'133px'}}/>
+                    {/* <div className="content"> */}
+                      <div className="text">Text</div>
+                    {/* </div> */}
+                  </div>
+                <div>
+                <div className="example">
+                <Image src="../../../../images/r5copy.jpg" className="rounded-lg m-1" alt="tree"  style={{width:'200px',maxHeight:'133px'}}/>
+                    <div className="text">Text</div>
+                </div>
+              </div>
+              
+            </div>
+            <div style={{display:'flex',justifyContent:'center',width:'100%'}}>
+              {/* <Image src={imageSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} /> */}
+                <div className="example">
+                  <Image src="../../../../images/r1.jpg" className="rounded-lg m-1" alt="tree"  style={{width:'200px',maxHeight:'133px'}}/>
+                      <div className="text">Text</div>
+                </div>
+                <div className="example">
+                  <Image src="../../../../images/r2.jpg" className="rounded-lg m-1" alt="tree"  style={{width:'200px',maxHeight:'133px'}}/>
+                      <div className="text">Text</div>
+                </div>
+                <div className="example">
+                  <Image src="../../../../images/r3.jpg" className="rounded-lg m-1" alt="tree"  style={{width:'200px',maxHeight:'133px'}}/>
+                      <div className="text">Text</div>
+                </div>
+            </div>
+            <div style={{display:'flex',justifyContent:'center',width:'100%'}}>
+              <div className="example">
+                <Image src="../../../../images/r6.jpg" className="rounded-lg m-1" alt="tree"  style={{width:'200px',maxHeight:'133px'}}/>
+                    <div className="text">Text</div>
+              </div>
+              <div className="example">
+                <Image src="../../../../images/r7copy.jpg" className="rounded-lg m-1" alt="tree"  style={{width:'200px',maxHeight:'133px'}}/>
+                    <div className="text">Text</div>
+              </div>
+            </div>
+          </ImageColumn>
           <TextColumn textOnLeft={textOnLeft} style={{color:'white',width:'100%'}}>
             <Subheading>OUR MOTTO</Subheading>
-            <Heading style={{fontSize:'7rem',marginRight:'550px'}}><i className="fas fa-quote-left" style={{marginRight:'35px'}}></i>SERVICE ABOVE SELF<i className="fas fa-quote-right" style={{marginLeft:'35px'}}></i></Heading>
-            <Description style={{textAlign:'right',marginLeft:'550px'}}>Your generosity makes our work possible. Whether you contribute financially or as advocate for good, you make a real and lasting difference in people’s lives.</Description>
+            <Heading style={{fontSize:'5rem'}}><i className="fas fa-quote-left" style={{marginRight:'35px'}}></i><br></br>SERVICE ABOVE SELF<i className="fas fa-quote-right" style={{marginLeft:'35px'}}></i></Heading>
+            <Description style={{textAlign:'right',}}>Your generosity makes our work possible. Whether you contribute financially or as advocate for good, you make a real and lasting difference in people’s lives.</Description>
             {/* <TestimonialSlider arrows={false} ref={setSliderRef}>
               {testimonials.map((testimonial, index) => (
                 <Testimonial key={index}>
@@ -145,7 +188,7 @@ export default ({
               ))}
             </TestimonialSlider> */}
           </TextColumn>
-        {/* </Row> */}
+        </Row>
       </ContentWithPaddingXl>
     </Container>
   );

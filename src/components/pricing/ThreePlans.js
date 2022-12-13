@@ -133,18 +133,20 @@ export default ({
 
   return (
     <Container>
-      <ContentWithPaddingXl>
+      <ContentWithPaddingXl style={{paddingTop:0}}>
         <HeaderContainer>
           {/* {subheading && <Subheading>{subheading}</Subheading>} */}
-          <Heading style={{textShadow: '0 0 5px #fff, 0 0 10px #fff,  0 0 20px #913da1, 0 0 30px #80007c',
+          <Heading 
+          // style={{textShadow: '0 0 5px #fff, 0 0 10px #fff,  0 0 20px #913da1, 0 0 30px #80007c',
           //  0 0 40px green, 0 0 55px green, 0 0 70px green'
-           }}>JOIN US</Heading>
+          //  }}
+           >JOIN US</Heading>
           <Description style={{maxWidth:'none'}}>Club activities, social events, and volunteer projects offer networking opportunities that build personal and professional connections. And Rotarian’s can extend those networks by visiting other clubs around the globe.</Description>
           <button 
                 type="button" 
                 className=" mt-5 inline-block px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out"
                 style={{backgroundColor:'#d69e2e'}}>
-                 Learn More
+                 Get Involved
                 </button>
         </HeaderContainer>
         {/* <PlansContainer>

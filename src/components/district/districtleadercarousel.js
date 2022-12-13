@@ -98,7 +98,7 @@ export default ({
         "../../../../images/p1.PNG",
       heading: "Amazing User Experience",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. ",
       customerName: "JENNIFER JONES",
       customerTitle: "ROTARY INTERNATIONAL PRESIDENT 2022-23"
     },
@@ -138,7 +138,7 @@ export default ({
                         <CustomerProfilePicture src={testimonial.profileImageSrc} alt={testimonial.customerName}  style={{width:'100%',height:'auto'}}/>
                         
                       </div>
-                      <CustomerTextInfo>
+                      <CustomerTextInfo style={{width:'-webkit-fill-available'}}>
                         <CustomerName>{testimonial.customerName}</CustomerName>
                         <CustomerTitle>{testimonial.customerTitle}</CustomerTitle>
                         <TestimonialHeading>{testimonial.heading}</TestimonialHeading>

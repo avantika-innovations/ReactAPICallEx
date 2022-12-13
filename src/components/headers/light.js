@@ -12,6 +12,7 @@ import logo from "../../images/logo.svg";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 
+
 const Header = tw.header`
   flex justify-between items-center
   max-w-screen-xl mx-auto
@@ -73,16 +74,18 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
    * changing the defaultLinks variable below below.
    * If you manipulate links here, all the styling on the links is already done for you. If you pass links yourself though, you are responsible for styling the links or use the helper styled components that are defined here (NavLink)
    */
+
+
   const defaultLinks = [
     <>
     
     
     <NavLinks key={1} style={{display:'flex'}}>
 
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#" style={{backgroundColor:'4054B2'}}>Reporting CMR</PrimaryLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Exchange Rate</PrimaryLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Rotary India</PrimaryLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">RID3420 Rotary India</PrimaryLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#" style={{backgroundColor:'4054B2'}}>Reporting CMR</PrimaryLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">Exchange Rate</PrimaryLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">Rotary India</PrimaryLink>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">RID3420 Rotary India</PrimaryLink>
       
         
     </NavLinks>
@@ -94,7 +97,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
   const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
 
   const defaultLogoLink = (
-    <LogoLink href="/">
+    <LogoLink href="/" >
       {/* <img src={logo} alt="logo" /> */}
       {/* Rotary3240 */}
       <img src="https://www.rid3240.org/new/wp-content/uploads/2022/06/21-22-RI-theme-logo-11-1024x262.png" alt="logo" width="250px" height="62px"/>
@@ -108,7 +111,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
     <Header className={className || "header-light"} 
     style={{maxWidth:'none',padding:'50px 50px 0 50px'}}
     >
-      <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks}>
+      <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks} >
         {logoLink}
         {links}
       </DesktopNavLinks>

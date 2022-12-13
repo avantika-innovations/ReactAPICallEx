@@ -51,7 +51,7 @@ export default () => {
   return (
     <Container style={{backgroundColor:'black'}}>
       <Content style={{maxWidth:'1580px'}}>
-        <FiveColumns>
+        <FiveColumns style={{justifyContent:'space-evenly'}}>
           <Column>
             <ColumnHeading style={{fontSize:'25px'}}>ROTARY.ORG</ColumnHeading>
             <LinkList>

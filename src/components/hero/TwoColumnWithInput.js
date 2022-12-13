@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-distracting-elements */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/jsx-no-undef */
 import React from "react";
@@ -11,7 +12,7 @@ import Header, { NavLinks } from "../headers/light.js";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-1.svg";
 import DesignIllustration from "../../images/design-illustration-2.svg";
 import CustomersLogoStripImage from "../../images/customers-logo-strip.png";
-
+import '../../style.css'
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
 
@@ -106,8 +107,9 @@ export default ({ roundedHeaderButton }) => {
       </nav>
       <Header roundedHeaderButton={roundedHeaderButton} />
       
-        <nav className="navbar navbar-expand-lg py-2 relative flex items-center w-full justify-between mt-5" style={{paddingLeft:'auto',paddingRight:'auto',boxShadow:'0 0 10px #80808085'}}>
-          <div className="px-6 w-full flex flex-wrap items-center justify-between" style={{float:'left'}}>
+        <nav className="navbar navbar-expand-lg py-2 mt-5" style={{paddingLeft:'auto',paddingRight:'auto',boxShadow:'0 0 10px #80808085'}}>
+        {/* <nav className="navbar navbar-expand-lg py-2 relative flex items-center w-full justify-between mt-5" style={{paddingLeft:'auto',paddingRight:'auto',boxShadow:'0 0 10px #80808085'}}> */}
+          <div className="px-6 " style={{}}>
             {/* <div className="flex items-center">
               <button
                 className="navbar-toggler border-0 py-3 lg:hidden leading-none text-xl bg-transparent text-gray-600 hover:text-gray-700 focus:text-gray-700 transition-shadow duration-150 ease-in-out mr-2"
@@ -133,10 +135,10 @@ export default ({ roundedHeaderButton }) => {
                     d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
                   ></path>
                 </svg>
-              </button>
+              </button>lg:flex lg:flex-row items-center
             </div> */}
-            <div className="navbar-collapse grow items-center" id="navbarSupportedContentY">
-              <ul className="navbar-nav mr-auto lg:flex lg:flex-row" style={{marginLeft:'auto',fontWeight:'bold'}}>
+            <div className="navbar-collapse grow " id="navbarSupportedContentY" style={{}}>
+              <ul className="navbar-nav mr-auto " style={{marginLeft:'auto',fontWeight:'bold',display:'flex'}}>
 
                 <li className="nav-item">
                   {/* <a className="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-gray-700 focus:text-gray-700 transition duration-150 ease-in-out" href="#!" data-mdb-ripple="true" >Home</a> */}
@@ -330,9 +332,10 @@ export default ({ roundedHeaderButton }) => {
                       <ul className=" dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  bg-clip-padding  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
                         <li>
                           <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
-                            2020-21
+                            
+                          2020-21
                           </a>
-                        <ul className="dropdown-menu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none"
+                        <ul className="dropdown-submenu min-w-max absolute hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none"
                               aria-labelledby="dropdownMenuButton1e"
                             >
                               <li>
@@ -438,43 +441,6 @@ export default ({ roundedHeaderButton }) => {
                   <button type="button" className="inline-block px-6 py-2.5 bg-transparent text-blue-600 font-medium text-xs leading-tight uppercase rounded hover:bg-gray-100 focus:text-blue-700 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 active:text-blue-800 transition duration-300 ease-in-out" style={{fontWeight:'bold',color:'#4054b2'}}>Contact Us</button>
                 </li>
 
-
-
-
-                <li className="nav-item">
-                  <div className="dropdown relative"> 
-                    <a className="text-gray-500 hover:dropdown-menu  focus:dropdown-menu  mr-4  dropdown-toggle  hidden-arrow  flex items-center " href="#" id="dropdownMenuButton1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      
-                      <button type="button" className=" px-6 py-2.5 bg-transparent font-medium text-xs leading-tight uppercase rounded hover:visible transition duration-300 ease-in-out" style={{fontWeight:'bold',color:'#4054b2',display:'flex'}} >District
-                        <svg
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="caret-down"
-                          className="w-2"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 320 512"
-                          style={{marginLeft:'15px'}}
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
-                          ></path>
-                        </svg>
-                        </button>
-                    </a>
-                      <ul className="dropdown-menu  min-w-max  absolute  hidden  bg-white  text-base  z-50  float-left  py-2  list-none  text-lef  shadow-lg  mt-1  hidden  m-0  border-none  left-auto  right-0" aria-labelledby="dropdownMenuButton1">
-                        <li>
-                          <a className="dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#">
-                            District Committee
-                          </a>
-                        </li>
-                        
-                        
-                      </ul>
-                  </div>
-                </li>
               </ul>
             </div>
           </div>

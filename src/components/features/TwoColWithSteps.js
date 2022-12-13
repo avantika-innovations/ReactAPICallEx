@@ -159,7 +159,7 @@ export default ({
             <div style={{display:'flex',justifyContent:'space-between',padding:'25px'}}>
               <div style={{display:'flex'}}>
                 <button
-                  className="carousel-control-prev bottom-0 px-2 py-1 text-center"
+                  className="rounded carousel-control-prev bottom-0 px-2 py-1 text-center"
                   // className="rounded-full carousel-control-prev bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
                   type="button"
                   data-bs-target="#carouselExampleCaptions"
@@ -175,7 +175,7 @@ export default ({
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" style={{opacity:'1',height:'auto',textAlign:'right'}}>3</button>
                   </div>
                 <button
-                  className="carousel-control-next bottom-0 flex items-center justify-center px-2 py-1 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                  className="rounded carousel-control-next bottom-0 flex items-center justify-center px-2 py-1 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
                   type="button"
                   data-bs-target="#carouselExampleCaptions"
                   data-bs-slide="next"

@@ -27,6 +27,7 @@ export default () => {
 
   return (
     <AnimationRevealPage>
+      
       <Hero roundedHeaderButton={true} />
       {/* <Features
         subheading={<Subheading>Features</Subheading>}
@@ -37,6 +38,7 @@ export default () => {
           </>
         }
       /> */}
+      
       <Districtleadercarousel/>
       {/* <MainFeature
         subheading={<Subheading>ZONE6 : DISTRICT 3240</Subheading>}
