@@ -84,5 +84,5 @@
   -webkit-transform: translateY(50px);
 }
 
-.dropdown:hover .dropdown-menu {display: block;}
+.nav-item:hover .dropdown:hover .dropdown-menu {display: inline-block;}
 .dropdown:hover .dropdown-menu:hover  .dropdown-submenu{display: block;}
