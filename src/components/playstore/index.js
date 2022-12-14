@@ -35,7 +35,7 @@ export default ({
   return (
     <Container css={pushDownFooter && tw`mb-20 lg:mb-24`} style={{margin:0}}>
       <ContentWithPaddingXl style={{maxWidth:'none',padding:0}}>
-        <PrimaryBackgroundContainer style={{color:'black',padding:0}}>
+        <PrimaryBackgroundContainer style={{color:'black',paddingTop:'20px',paddingBottom:'20px'}}>
             {/* <div className="" style={{display:'flex',maxWidth:'750px',marginRight:'auto',marginLeft:'auto'}}> */}
                 {/* <Text style={{textAlign:'center',fontWeight:'bold',marginBottom:'20px',fontSize:'45px',color:'black'}}>DOWNLOAD OUR OFFICIAL DISTRICT APP</Text>   
                 <img width="226" height="131" src="https://www.rid3240.org/new/wp-content/uploads/2020/07/rid3240.jpg" className="attachment-large size-large" alt="" loading="lazy"/> */}
@@ -46,9 +46,9 @@ export default ({
                     <Text style={{color:'black'}}>DOWNLOAD OUR OFFICIAL DISTRICT APP</Text>   
                     <img width="126" src="https://www.rid3240.org/new/wp-content/uploads/2020/07/rid3240.jpg" className="attachment-large size-large" alt="" loading="lazy" style={{height:'80px'}}/>  
                     </div> 
-                     <div style={{display:'flex'}}>                                                                                                
-                    <img width="246" height="150" src="https://www.rid3240.org/new/wp-content/uploads/2020/06/en_badge_web_generic.png" class="attachment-large size-large" alt="" loading="lazy"/>
-                    <img width="224" height="104" src="https://www.rid3240.org/new/wp-content/uploads/2020/07/0_1-msaTEYYCzIXAYC_-1024x354.png" className="attachment-large size-large" alt="" loading="lazy"/>
+                     <div style={{display:'flex',alignItems:'center',justifyContent:'center',marginTop:'10px'}}>                                                                                                
+                    <img  src="https://www.rid3240.org/new/wp-content/uploads/2020/06/en_badge_web_generic.png" class="attachment-large size-large" alt="" loading="lazy" style={{height:'60px'}}/>
+                    <img src="https://www.rid3240.org/new/wp-content/uploads/2020/07/0_1-msaTEYYCzIXAYC_-1024x354.png" className="" alt="" loading="lazy" style={{height:'40px'}}/>
                     </div> 
                 </TextContainer>
             </Row>

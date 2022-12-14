@@ -100,7 +100,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
     <LogoLink href="/" >
       {/* <img src={logo} alt="logo" /> */}
       {/* Rotary3240 */}
-      <img src="https://www.rid3240.org/new/wp-content/uploads/2022/06/21-22-RI-theme-logo-11-1024x262.png" alt="logo" width="250px" height="62px"/>
+      <img src="https://www.rid3240.org/new/wp-content/uploads/2022/06/21-22-RI-theme-logo-11-1024x262.png" alt="logo" width="300px" height="80px"/>
     </LogoLink>
   );
 
