@@ -41,7 +41,7 @@ const CardLinks = styled.div`
 `
 
 export default ({
-  heading = "Meet These Fine Folks.",
+  heading = "YOUNG SPRINGS (E-RYLA)",
   subheading = "Our Team",
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   cards = [
@@ -162,14 +162,30 @@ export default ({
   ]
 }) => {
   return (
-    <Container>
-      <ContentWithPaddingXl>
-        <HeadingContainer>
-          {subheading && <Subheading>{subheading}</Subheading>}
-          {heading && <Heading>{heading}</Heading> }
-          {description && <Description>{description}</Description> }
+    <Container style={{backgroundColor:'rgb(12,63,116)'}}>
+      <ContentWithPaddingXl style={{padding:'20px 0'}}>
+        <HeadingContainer style={{color:'white'}}>
+          {/* {subheading && <Subheading>{subheading}</Subheading>} */}
+          <div>
+            {heading && <Heading>{heading}</Heading> }
+            <div style={{width:'40%',margin:'10px auto 0 auto',fontSize:'larger'}}>
+              <div style={{color:'white',display:'flex'}}>
+                <div style={{marginRight:'15px'}}>HOST:</div> 
+                <div>Rotary Club of Guwahati City</div> 
+              </div>
+              <div style={{color:'white',display:'flex'}}>
+                <div style={{marginRight:'15px'}}>Dates:</div> 
+                <div>14, 15 & 16 May, 2021</div> 
+              </div>
+              <div style={{color:'white',display:'flex'}}>
+                <div style={{marginRight:'15px'}}>Age Group:</div> 
+                <div>14-30 Years</div> 
+              </div>
+            </div>
+          </div>
+          
         </HeadingContainer>
-        <Cards>
+        {/* <Cards>
           {cards.map((card, index) => (
             <Card key={index}>
               <CardImage imageSrc={card.imageSrc} />
@@ -186,7 +202,7 @@ export default ({
               </CardContent>
             </Card>
           ))}
-        </Cards>
+        </Cards> */}
       </ContentWithPaddingXl>
     </Container>
   );

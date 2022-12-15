@@ -86,3 +86,7 @@
 
 .nav-item:hover .dropdown:hover .dropdown-menu {display: inline-block;}
 .dropdown:hover .dropdown-menu:hover  .dropdown-submenu{display: block;}
+
+.offcanvas-backdrop.show {
+  opacity: 0;
+}

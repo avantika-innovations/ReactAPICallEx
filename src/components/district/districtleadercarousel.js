@@ -152,6 +152,7 @@ export default ({
                 </Testimonial>))}
                 
             </TestimonialSlider>
+            
             <Controls style={{}}>
                 <ControlButton onClick={sliderRef?.slickPrev}>
                   <ArrowLeftIcon style={{color:'rgb(12, 63, 116)'}}/>
@@ -161,7 +162,14 @@ export default ({
                   <ArrowRightIcon  style={{color:'rgb(12, 63, 116)'}}/>
                 </ControlButton>
               </Controls>
+              
           </TextColumn>
+
+          
+
+
+
+          
         {/* </Row> */}
       </ContentWithPaddingXl>
     </Container>
