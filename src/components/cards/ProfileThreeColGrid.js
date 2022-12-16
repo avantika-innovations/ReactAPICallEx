@@ -166,21 +166,24 @@ export default ({
       <ContentWithPaddingXl style={{padding:'20px 0'}}>
         <HeadingContainer style={{color:'white'}}>
           {/* {subheading && <Subheading>{subheading}</Subheading>} */}
-          <div>
-            {heading && <Heading>{heading}</Heading> }
-            <div style={{width:'40%',margin:'10px auto 0 auto',fontSize:'larger'}}>
-              <div style={{color:'white',display:'flex'}}>
+          <div style={{textAlign:'end'}}>
+            {heading && <Heading style={{textAlign:'end'}}>{heading}</Heading> }
+            <div style={{margin:'10px auto 0 auto',fontSize:'larger',}}>
+              <div style={{color:'white',display:'flex',justifyContent:'end'}}>
                 <div style={{marginRight:'15px'}}>HOST:</div> 
                 <div>Rotary Club of Guwahati City</div> 
               </div>
-              <div style={{color:'white',display:'flex'}}>
+              <div style={{color:'white',display:'flex',justifyContent:'end'}}>
                 <div style={{marginRight:'15px'}}>Dates:</div> 
                 <div>14, 15 & 16 May, 2021</div> 
               </div>
-              <div style={{color:'white',display:'flex'}}>
+              <div style={{color:'white',display:'flex',justifyContent:'end'}}>
                 <div style={{marginRight:'15px'}}>Age Group:</div> 
                 <div>14-30 Years</div> 
               </div>
+            </div>
+            <div>
+              <button className="px-5 py-2 rounded-full" type="button" style={{backgroundColor:'rgb(214,158,46)'}}>REGISTER NOW</button>
             </div>
           </div>
           

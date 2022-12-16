@@ -122,7 +122,7 @@ export default function App() {
           <Route path="/components/:type/:name" element={<ComponentRenderer />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
           <Route path="/" element={<MainLandingPage />} />
-          <Route path="aboutus" element={<AboutUs />} />
+          <Route path="dashboard" element={<AboutUs />} />
           <Route path="login" element={<Login />} />
         </Routes>
       </Router>

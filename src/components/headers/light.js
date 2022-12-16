@@ -126,7 +126,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
   return (
     <Header className={className || "header-light"} 
-    style={{maxWidth:'none',padding:'50px 50px 0 50px'}}
+    style={{maxWidth:'none',padding:'50px 50px 0 50px',borderBottom:'3px solid grey'}}
     >
       <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks} >
         {logoLink}
@@ -166,7 +166,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
                       className="inline-block px-6 py-2.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
                       data-bs-dismiss="modal"
                       >
-                      <Link to={'/aboutus'}>Submit</Link>
+                      <Link to={'/dashboard'}>Submit</Link>
                     </button>
                     {/* <button type="button"
                     style={{backgroundColor:'#0c3f74'}}
