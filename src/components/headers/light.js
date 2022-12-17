@@ -87,7 +87,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
     <NavLinks key={1} style={{display:'flex'}}>
 
-      {homeMenu && <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#" style={{backgroundColor:'4054B2'}}>Reporting CMR</PrimaryLink>}
+      {homeMenu && <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/ReportingCMR" style={{backgroundColor:'4054B2'}}>Reporting CMR</PrimaryLink>}
       {homeMenu && <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">Exchange Rate</PrimaryLink>}
       {homeMenu && <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">Rotary India</PrimaryLink>}
       {homeMenu && <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">RID3420 Rotary India</PrimaryLink>}
@@ -126,7 +126,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
   return (
     <Header className={className || "header-light"} 
-    style={{maxWidth:'none',padding:'50px 50px 0 50px',borderBottom:'3px solid grey'}}
+    style={{maxWidth:'none',padding:'50px 50px 0 50px'}}
     >
       <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks} >
         {logoLink}
