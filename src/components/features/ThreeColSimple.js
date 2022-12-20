@@ -502,9 +502,6 @@ export default ({
               <div className="tab-pane fade" id="tabs-notificationsVertical" role="tabpanel" aria-labelledby="tabs-notifications-tabVertical">
                 Notifications
               </div>
-              {/* <div className="tab-pane fade" id="tabs-logoutVertical" role="tabpanel" aria-labelledby="tabs-logout-tabVertical">
-                Logout
-              </div> */}
             </div>
           </div>
         </ContentWithPaddingXl>
