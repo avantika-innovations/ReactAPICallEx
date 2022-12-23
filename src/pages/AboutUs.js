@@ -18,7 +18,7 @@ import SupportIconImage from "images/support-icon.svg";
 import ShieldIconImage from "images/shield-icon.svg";
 import CustomerLoveIconImage from "images/simple-icon.svg";
 import Hero from "components/hero/TwoColumnWithInput.js";
-import { Link } from 'react-router-dom';
+
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
 

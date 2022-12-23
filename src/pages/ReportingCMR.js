@@ -7,7 +7,7 @@ import Footer from "components/footers/FiveColumnWithBackground.js";
 import 'froala-editor/css/froala_style.min.css';
 import 'froala-editor/css/froala_editor.pkgd.min.css';
 import FroalaEditorComponent from 'react-froala-wysiwyg';
-
+import { Link } from 'react-router-dom';
 
 const Container = tw(ContainerBase)``;
 
@@ -42,11 +42,11 @@ const ReportingCMR = () =>{
     setNewText ((t) => [...t,
     <div>
       <div>
-        <input type="text" style={{border:'2px solid rgb(209 213 219 )',width:'80%',borderRadius:'5px',padding:'5px 10px',margin:'3px 2px'}}/>
+        <input type="text" style={{border:'2px solid rgb(209 213 219 )',width:'98%',borderRadius:'5px',padding:'5px 10px',margin:'3px 2px'}}/>
       </div>
-      <button >
+      {/* <button >
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-      </button>
+      </button> */}
     </div>
       
     
@@ -63,7 +63,9 @@ const ReportingCMR = () =>{
     <Container>
       {/* <Content> */}
         <Header/>
-
+        <button className="rounded-full px-5 py-3 mx-5" type="button" style={{background:'rgb(12,63,116)',color:'white',float:'right'}}>
+          <Link to={'/Projectupload'}>Project Upload</Link>
+        </button>
         <div style={{fontSize:'25px',textAlign:'center'}}><b>CLUB MONTHLY REPORT</b></div>
         <ul className="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4" id="tabs-tab" role="tablist" style={{justifyContent:'start',width:'80%',margin:'0 auto',alignItems:'center'}}>
           <li className="nav-item" role="presentation">
@@ -234,7 +236,7 @@ const ReportingCMR = () =>{
                                   className=" py-2 px-3 rounded-md" 
                                   style={{width:'auto'}}                  
                                 /> */}
-                                <div style={{width:'100%',display:'flex',flexWrap:'wrap'}}>{newText}
+                                <div style={{width:'100%',display:'flex',flexWrap:'wrap',justifyContent:'space-between'}}>{newText}
                                 </div>
                                 <div style={{marginRight:'10px'}} onClick={() => setClose(true)}>
                                   <button onClick={addtext} >
@@ -351,7 +353,7 @@ const ReportingCMR = () =>{
                       </div>
                       <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                         <button
-                        style={{background:'blue'}}
+                        style={{background:'rgb(12,63,116)'}}
                           type="submit"
                           className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         >
@@ -550,7 +552,7 @@ const ReportingCMR = () =>{
                     </div>
                     <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                       <button
-                      style={{background:'blue'}}
+                      style={{background:'rgb(12,63,116)'}}
                         type="submit"
                         className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                       >
@@ -788,11 +790,11 @@ const ReportingCMR = () =>{
                       </div>
                       <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                         <button
-                        style={{background:'blue'}}
+                        style={{background:'rgb(12,63,116)'}}
                           type="submit"
                           className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                         >
-                          Next
+                          Submit
                         </button>
                       </div>
                     </div>
@@ -802,7 +804,7 @@ const ReportingCMR = () =>{
             </div>
           </div>
         </div>
-
+          
           
         <Footer />
     </Container>

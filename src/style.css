@@ -162,8 +162,8 @@ input:checked + .slider:after
 .switch {
   position: relative;
   display: inline-block;
-  width: 90px;
-  height: 34px;
+  width: 70px;
+  height: 30px;
 }
 
 .switch input {display:none;}
@@ -183,8 +183,8 @@ input:checked + .slider:after
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 24px;
+  width: 24px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -270,4 +270,29 @@ input:checked + .slider .off
   /* color: rgb(214,158,46); */
   background-color: rgb(214,158,46);
   color:white;
+}
+
+.item{
+  background-color: white;
+  color: rgb(12,63,116);
+  padding: 3px;
+}
+.item:hover{
+  background-color: rgb(214,158,46);
+  color: white;
+}
+
+
+.dx-scheduler-work-space-month .dx-scheduler-date-table-cell {
+  height: 100px;
+  vertical-align: top;
+  text-align: right;
+  color: #959595;
+}
+.dx-scheduler-date-table-cell {
+  height: 25px;
+}
+
+.dx-scheduler-time-panel-cell {
+    height: 25px;
 }

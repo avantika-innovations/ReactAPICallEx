@@ -108,6 +108,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUs from "pages/AboutUs";
 import Login from "pages/Login";
 import ReportingCMR from "pages/ReportingCMR";
+import Projectupload from "pages/Projectupload";
+import Ui from "pages/Ui";
+import Fields from "pages/Fields";
+import Appointmentdesigns from "pages/Appointmentdesigns";
+import Appointment from "pages/Appointment";
+import Scheduler from "pages/Scheduler";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
@@ -126,6 +132,12 @@ export default function App() {
           <Route path="dashboard" element={<AboutUs />} />
           <Route path="login" element={<Login />} />
           <Route path="ReportingCMR" element={<ReportingCMR/>} />
+          <Route path="Projectupload" element={<Projectupload/>}/>
+          <Route path="Ui" element={<Ui/>}/>
+          <Route path="Fields" element={<Fields/>}/>
+          <Route path="Appointmentdesigns" element={<Appointmentdesigns/>}/>
+          <Route path="Appointment" element={<Appointment/>}/>
+          <Route path="Scheduler" element={<Scheduler/>}/>
         </Routes>
       </Router>
     </>
