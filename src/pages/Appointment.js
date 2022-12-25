@@ -11,7 +11,6 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import Box from '@mui/material/Box';
 import { useEffect,useState } from 'react';
-import axios from 'axios';
 
 
 const currentDate = new Date(2021, 1, 2);
@@ -41,12 +40,11 @@ var newData= chunkedArray[pageNum - 1 ];
 const appointments = generateAppointments(startDay, endDay, startDayHour, endDayHour);
 
 const Appointment = () => {
-  // const [page, setPage] = React.useState(0);
-  const [name, setName] = React.useState([]);
-  // const [number, setNumber] = React.useState();
-  const [auto, setAuto] = React.useState([]);
 
+  const [name, setName] = React.useState([]);
+  const [auto, setAuto] = React.useState([]);
   const [data, setData] = useState([]);
+  const [event, setEvent] = useState([]);
    
   useEffect(() => {
     const token = "token " + localStorage.getItem('login');
@@ -58,32 +56,19 @@ const Appointment = () => {
     })
     .then((result) => {
       result.json().then((resp) =>{
-        console.warn("result",resp)
+        //console.log("result",resp)
         setData(resp.data.dataList)
+        setEvent(resp.event)
+        console.log("result",resp.data.dataList)
       })
     })
     
     // console.log(token)
   },[])
 
-  // useEffect(() => {
-  //     const token = "token " + localStorage.getItem('login');
-  //      fetch('http://103.253.15.184:8000/api/empappointmentview/?date=2022-12-24&check=day&page=1&limit=10&search=&type=staff', {
-  //         method:'GET',
-  //         headers: {
-  //             "Authorization" : token
-  //         },
-  //     }).then((result) => result.json()
-  //     .then((resp) => {
-  //         console.warn("result",resp)
-  //         setData(resp)
-  //     }
-  //     ))  
-  //     console.log(token)
-  // },[])
-
+  
   console.warn('data',data);
-
+  console.warn('event',event);
 
   const handleChange = (event,value,e,inputval) => {
     
@@ -144,22 +129,44 @@ const Appointment = () => {
 
   return (
     <>  
-    {/* {data.map(item => {      
-        <h1>{item.id}</h1>
-      }
-      )}  */}
+    
     <div>
+      <div>
+        <h1>welll</h1>
+            {
+            data && data.map((item,i)=>{
+              return(
+                
+                <h1>{item.staff_name}  && {item.id}</h1>
+              )
+            })
+          }
+      </div>
+      <div>
+        <h1>events</h1>
+        {event && event.map((event) => {
+          return(
+            <div key={event.appt_id}>
+              <div>{event.text}</div>
+            </div>
+          )
+        })}
+      </div>
      <div className="" style={{display:'flex',alignItems:'center',margin:'5px'}}> 
         <h1 style={{margin:'10px 50px',fontSize:'25px',width:'20%'}}><b>Filter</b></h1>
+          
+          
           <Autocomplete
             id="country-select-demo"
             sx={{ width: '30%' }}
             style={{padding:'10px 50px 0 0',margin:'5px'}}
             options={resources}
+            // options={data}
 
             multiple
             onChange={autoComplete}
-            getOptionLabel={(option) => option.text}
+            getOptionLabel={(option) => option.id}
+            // getOptionLabel={item.id}
             renderOption={(props, option) => (
               <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
                 <MenuItem value={option.text}>  
@@ -208,13 +215,20 @@ const Appointment = () => {
           type='month'
           groupOrientation='horizontal'
         />
-        
+         
         <Resource 
-          dataSource={newData}
-          label='Employee'
-          groupOrientation='horizontal'
-          fieldExpr='humanId'
-          />
+           dataSource={newData}
+             label='Employee'
+             groupOrientation='horizontal'
+             fieldExpr='humanId'
+           />
+        {/* {data && data.map((item) => {
+          return(
+            <Resource  
+           dataSource={item.id}
+          /> 
+          )
+        })} */}
           <Scrolling
           mode='virtual'/>
       </Scheduler>

@@ -52,7 +52,7 @@ export const resources = [{
     id: 12,
     text: 'Marcus Price',
     color: '#2ec98d',
-  }, {
+  }];/*, {
     id: 13,
     text: 'David Stewart',
     color: '#3ff6ca',
@@ -120,7 +120,7 @@ export const resources = [{
     id: 29,
     text: 'Sofia Green',
     color: '#4ddcca',
-  }];
+  }];*/
   
   const appointmentsText = [
     'Google AdWords Strategy',
