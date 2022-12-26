@@ -1,5 +1,5 @@
 
-/* eslint-disable no-undef */
+
 export const resources = [{
     id: 0,
     text: 'David Carter',
@@ -52,75 +52,7 @@ export const resources = [{
     id: 12,
     text: 'Marcus Price',
     color: '#2ec98d',
-  }];/*, {
-    id: 13,
-    text: 'David Stewart',
-    color: '#3ff6ca',
-  }, {
-    id: 14,
-    text: 'Joseph Smith',
-    color: '#f665aa',
-  }, {
-    id: 15,
-    text: 'Carter Wilson',
-    color: '#d1c974',
-  }, {
-    id: 16,
-    text: 'Wyatt Lopez',
-    color: '#ff6741',
-  }, {
-    id: 17,
-    text: 'John Long',
-    color: '#ee53dc',
-  }, {
-    id: 18,
-    text: 'Jack Rivera',
-    color: '#795ac3',
-  }, {
-    id: 19,
-    text: 'Victoria Adams',
-    color: '#ff7d8a',
-  }, {
-    id: 20,
-    text: 'Madison Anderson',
-    color: '#4cd482',
-  }, {
-    id: 21,
-    text: 'Luna Moore',
-    color: '#9d67cc',
-  }, {
-    id: 22,
-    text: 'Michael Bailey',
-    color: '#5ab1ef',
-  }, {
-    id: 23,
-    text: 'Jenny Powell',
-    color: '#68e18f',
-  }, {
-    id: 24,
-    text: 'Daniel Peterson',
-    color: '#4dd155',
-  }, {
-    id: 25,
-    text: 'Gabriel Gray',
-    color: '#ef9e44',
-  }, {
-    id: 26,
-    text: 'Anthony Robinson',
-    color: '#45a5cc',
-  }, {
-    id: 27,
-    text: 'Ellie Tomson',
-    color: '#a067bd',
-  }, {
-    id: 28,
-    text: 'Natalie Adams',
-    color: '#3d44ec',
-  }, {
-    id: 29,
-    text: 'Sofia Green',
-    color: '#4ddcca',
-  }];*/
+  }];
   
   const appointmentsText = [
     'Google AdWords Strategy',
@@ -140,46 +72,46 @@ export const resources = [{
     'Provide New Health Insurance Docs',
     'Review Changes to Health Insurance Coverage',
     'Review Training Course for any Ommissions',
-    'Recall Rebate Form',
-    'Create Report on Customer Feedback',
-    'Review Customer Feedback Report',
-    'Customer Feedback Report Analysis',
-    'Prepare Shipping Cost Analysis Report',
-    'Provide Feedback on Shippers',
-    'Select Preferred Shipper',
-    'Complete Shipper Selection Form',
-    'Upgrade Server Hardware',
-    'Upgrade Personal Computers',
-    'Upgrade Apps to Windows RT or stay with WinForms',
-    'Estimate Time Required to Touch-Enable Apps',
-    'Report on Tranistion to Touch-Based Apps',
-    'Submit New Website Design',
-    'Create Icons for Website',
-    'Create New Product Pages',
-    'Approve Website Launch',
-    'Update Customer Shipping Profiles',
-    'Create New Shipping Return Labels',
-    'Get Design for Shipping Return Labels',
-    'PSD needed for Shipping Return Labels',
-    'Contact ISP and Discuss Payment Options',
-    'Prepare Year-End Support Summary Report',
-    'Review New Training Material',
-    'Distribute Training Material to Support Staff',
-    'Training Material Distribution Schedule',
-    'Approval on Converting to New HDMI Specification',
-    'Create New Spike for Automation Server',
-    'Code Review - New Automation Server',
-    'Confirm Availability for Sales Meeting',
-    'Reschedule Sales Team Meeting',
-    'Send 2 Remotes for Giveaways',
-    'Discuss Product Giveaways with Management',
-    'Replace Desktops on the 3rd Floor',
-    'Update Database with New Leads',
-    'Mail New Leads for Follow Up',
-    'Send Territory Sales Breakdown',
-    'Territory Sales Breakdown Report',
-    'Report on the State of Engineering Dept',
-    'Staff Productivity Report',
+    // 'Recall Rebate Form',
+    // 'Create Report on Customer Feedback',
+    // 'Review Customer Feedback Report',
+    // 'Customer Feedback Report Analysis',
+    // 'Prepare Shipping Cost Analysis Report',
+    // 'Provide Feedback on Shippers',
+    // 'Select Preferred Shipper',
+    // 'Complete Shipper Selection Form',
+    // 'Upgrade Server Hardware',
+    // 'Upgrade Personal Computers',
+    // 'Upgrade Apps to Windows RT or stay with WinForms',
+    // 'Estimate Time Required to Touch-Enable Apps',
+    // 'Report on Tranistion to Touch-Based Apps',
+    // 'Submit New Website Design',
+    // 'Create Icons for Website',
+    // 'Create New Product Pages',
+    // 'Approve Website Launch',
+    // 'Update Customer Shipping Profiles',
+    // 'Create New Shipping Return Labels',
+    // 'Get Design for Shipping Return Labels',
+    // 'PSD needed for Shipping Return Labels',
+    // 'Contact ISP and Discuss Payment Options',
+    // 'Prepare Year-End Support Summary Report',
+    // 'Review New Training Material',
+    // 'Distribute Training Material to Support Staff',
+    // 'Training Material Distribution Schedule',
+    // 'Approval on Converting to New HDMI Specification',
+    // 'Create New Spike for Automation Server',
+    // 'Code Review - New Automation Server',
+    // 'Confirm Availability for Sales Meeting',
+    // 'Reschedule Sales Team Meeting',
+    // 'Send 2 Remotes for Giveaways',
+    // 'Discuss Product Giveaways with Management',
+    // 'Replace Desktops on the 3rd Floor',
+    // 'Update Database with New Leads',
+    // 'Mail New Leads for Follow Up',
+    // 'Send Territory Sales Breakdown',
+    // 'Territory Sales Breakdown Report',
+    // 'Report on the State of Engineering Dept',
+    // 'Staff Productivity Report',
   ];
   
   function getRandomDuration(durationState) {
@@ -190,7 +122,6 @@ export const resources = [{
   
   function getRandomText(textIndex) {
     return (appointmentsText[textIndex % appointmentsText.length]);
-    
   }
   
   function filterAppointmentsByTime(appointments, startDayHour, endDayHour) {

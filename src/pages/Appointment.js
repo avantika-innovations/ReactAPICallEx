@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Scheduler, { Resource, View, Scrolling } from 'devextreme-react/scheduler';
 import {resources,generateAppointments} from '../data.js';
@@ -11,8 +10,6 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import Box from '@mui/material/Box';
 import { useEffect,useState } from 'react';
-
-
 const currentDate = new Date(2021, 1, 2);
 
 const groups = ['humanId'];
@@ -24,20 +21,14 @@ const endDay = new Date(2021, 1, 28);
 const startDayHour = 9;  
 const endDayHour = 22;
 
-
 const chunk = (arr, size) =>
-  Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
-    arr.slice(i * size, i * size + size)
-  );
-
-
+Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
+  arr.slice(i * size, i * size + size)
+);
+   
 var chunkedArray = chunk(resources, pageSize); 
 console.log('chunkedarraydat ',chunkedArray);
-
-var newData= chunkedArray[pageNum - 1 ];
-
-     
-const appointments = generateAppointments(startDay, endDay, startDayHour, endDayHour);
+  var newData= chunkedArray[pageNum - 1 ];
 
 const Appointment = () => {
 
@@ -56,22 +47,101 @@ const Appointment = () => {
     })
     .then((result) => {
       result.json().then((resp) =>{
-        //console.log("result",resp)
         setData(resp.data.dataList)
         setEvent(resp.event)
-        console.log("result",resp.data.dataList)
+        // console.log("result",resp.data.dataList)
       })
     })
     
-    // console.log(token)
   },[])
+  // console.warn('data',data);
+  // console.warn('event',event);
 
-  
-  console.warn('data',data);
-  console.warn('event',event);
+  const resource = 
+    data.map(item => {
+        return({id: item['id'], text: item['staff_name'], color: ''} )
+      }
+    );
+    console.log('dataresponse ',resource);
+  const appointmentText = 
+      event.map(list => {
+        return({
+          text: list['text'],
+          startDate: list['startDate'],
+          endDate: list['endDate']
+        })
+      })
+  console.log('appointmentText ',appointmentText);
 
-  const handleChange = (event,value,e,inputval) => {
+  const getRandomDuration = (durationState) => {
+    const durationMin = Math.floor((durationState % 23) / 3 + 5) * 15;
+    return durationMin * 60 * 1000;
+  }
+
+  const getRandomText = () => {
+    console.log('appointmentText ', appointmentText); 
+    return (appointmentText);
     
+  }
+
+  const filterAppointmentsByTime = (appointmentText, startDayHour, endDayHour) => {
+    const result = [];
+    // console.log('appointments ', appointments);
+    for (let i = 0; i < appointmentText; i += 1) {
+      // console.log('appointmentText.length ', appointmentText);
+      // console.log('startDayHour ',startDayHour);
+      const { startDate } = appointmentText[i];
+      const { endDate } = appointmentText[i];
+      // console.log(' appointmentText[i] ', appointmentText[i]);
+      if (startDate.getDay() === endDate.getDay()
+          && startDate.getHours() >= startDayHour - 1
+          && endDate.getHours() <= endDayHour - 1) {
+        result.push(appointmentText[i]);
+      }
+    }
+    // console.log('result ',result);
+    return result;
+    
+  }
+  
+
+  const generateAppointments= (startDay, endDay, startDayHour, endDayHour) => {
+    const appointments = [];
+  
+    let textIndex = 0;
+    let durationState = 1;
+    const durationIncrement = 19;
+  
+    for (let i = 0; i < resources.length; i += 1) {
+      let startDate = startDay;
+  
+      while (startDate.getTime() < endDay.getTime()) {
+        durationState += durationIncrement;
+        const endDate = new Date(startDate.getTime() + getRandomDuration(durationState));
+        appointments.push({
+          text: getRandomText(textIndex),
+          startDate,
+          endDate,
+          humanId: resources[i].id,
+          
+          
+        });  
+        textIndex += 1;  
+        durationState += durationIncrement;
+        startDate = new Date(endDate.getTime() + getRandomDuration(durationState));
+        
+      }
+    }
+  
+    return filterAppointmentsByTime(appointments, startDayHour, endDayHour);
+   
+  }
+  
+  
+  const appointment = generateAppointments(startDay, endDay, startDayHour, endDayHour);
+
+  // console.log('appointment ',appointment);
+  const handleChange = (event,value,e,inputval) => {    
       console.log('value',value);
       pageNum=value;
       console.log("pagenum1 ",pageNum);   
@@ -131,27 +201,6 @@ const Appointment = () => {
     <>  
     
     <div>
-      <div>
-        <h1>welll</h1>
-            {
-            data && data.map((item,i)=>{
-              return(
-                
-                <h1>{item.staff_name}  && {item.id}</h1>
-              )
-            })
-          }
-      </div>
-      <div>
-        <h1>events</h1>
-        {event && event.map((event) => {
-          return(
-            <div key={event.appt_id}>
-              <div>{event.text}</div>
-            </div>
-          )
-        })}
-      </div>
      <div className="" style={{display:'flex',alignItems:'center',margin:'5px'}}> 
         <h1 style={{margin:'10px 50px',fontSize:'25px',width:'20%'}}><b>Filter</b></h1>
           
@@ -191,12 +240,12 @@ const Appointment = () => {
       </div>
       
       <Scheduler
-        dataSource={appointments}
+        dataSource={appointment}
+        // dataSource={appointmentText}
         defaultCurrentView='Timeline'
         defaultCurrentDate={currentDate}
         startDayHour={startDayHour}
         endDayHour={endDayHour}
-
         showAllDayPanel={false}
         groups={groups}
         >
@@ -215,20 +264,13 @@ const Appointment = () => {
           type='month'
           groupOrientation='horizontal'
         />
-         
+        
         <Resource 
-           dataSource={newData}
-             label='Employee'
-             groupOrientation='horizontal'
-             fieldExpr='humanId'
-           />
-        {/* {data && data.map((item) => {
-          return(
-            <Resource  
-           dataSource={item.id}
-          /> 
-          )
-        })} */}
+          dataSource={resource}
+          label='Employee'
+          groupOrientation='horizontal'
+          fieldExpr='humanId'
+          />
           <Scrolling
           mode='virtual'/>
       </Scheduler>
@@ -245,4 +287,3 @@ const Appointment = () => {
 }
 
 export default Appointment;
-
