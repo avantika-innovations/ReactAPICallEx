@@ -79,27 +79,27 @@ const Appointment = () => {
   }
 
   const getRandomText = () => {
-    console.log('appointmentText ', appointmentText); 
+    // console.log('appointmentText1 ', appointmentText); 
     return (appointmentText);
     
   }
 
   const filterAppointmentsByTime = (appointmentText, startDayHour, endDayHour) => {
     const result = [];
-    // console.log('appointments ', appointments);
-    for (let i = 0; i < appointmentText; i += 1) {
+    console.log('appointmentText2 ', appointmentText);
+    for (let i = 0; i < appointmentText.length; i += 1) {
       // console.log('appointmentText.length ', appointmentText);
       // console.log('startDayHour ',startDayHour);
       const { startDate } = appointmentText[i];
       const { endDate } = appointmentText[i];
       // console.log(' appointmentText[i] ', appointmentText[i]);
-      if (startDate.getDay() === endDate.getDay()
-          && startDate.getHours() >= startDayHour - 1
-          && endDate.getHours() <= endDayHour - 1) {
+      // if (startDate.getDay() === endDate.getDay()
+      //     && startDate.getHours() >= startDayHour - 1
+      //     && endDate.getHours() <= endDayHour - 1) {
         result.push(appointmentText[i]);
-      }
+      // }
     }
-    // console.log('result ',result);
+    console.log('result ',result);
     return result;
     
   }
@@ -112,7 +112,7 @@ const Appointment = () => {
     let durationState = 1;
     const durationIncrement = 19;
   
-    for (let i = 0; i < resources.length; i += 1) {
+    for (let i = 0; i < resource.length; i += 1) {
       let startDate = startDay;
   
       while (startDate.getTime() < endDay.getTime()) {
@@ -122,7 +122,8 @@ const Appointment = () => {
           text: getRandomText(textIndex),
           startDate,
           endDate,
-          humanId: resources[i].id,
+          humanId: resource[i].id,
+          
           
           
         });  
@@ -133,14 +134,14 @@ const Appointment = () => {
       }
     }
   
-    return filterAppointmentsByTime(appointments, startDayHour, endDayHour);
+    return filterAppointmentsByTime(appointmentText, startDayHour, endDayHour);
    
   }
   
   
   const appointment = generateAppointments(startDay, endDay, startDayHour, endDayHour);
 
-  // console.log('appointment ',appointment);
+  console.log('appointment ',appointment);
   const handleChange = (event,value,e,inputval) => {    
       console.log('value',value);
       pageNum=value;
