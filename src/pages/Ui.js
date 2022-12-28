@@ -1,7 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import { Link, Router, useNavigate } from 'react-router-dom'
 import axios from 'axios';
-import Fields from "pages/Fields";
 
 const Ui = () => {
     const navigate = useNavigate();
@@ -57,8 +56,9 @@ const Ui = () => {
     
 
     return (
-        <form style={{display:'flex',justifyContent:'center',marginTop:'250px'}} >
-            <div style={{width:'25%',border:'2px solid rgb(214,158,46)',borderRadius:'15px ',alignItems:'center'}}>
+        <div>
+        <form style={{display:'flex',justifyContent:'center',alignItems:'center',height:'850px'}}>
+            <div style={{width:'20%',border:'2px solid rgb(214,158,46)',borderRadius:'15px ',alignItems:'center'}} className="shadow-lg">
                 <div style={{fontSize:'25px',textAlign:'center',background:'rgb(214,158,46)',color:'white',borderRadius:'14px 14px 0 0 '}} className="px-5 py-4"><h3><b>Login</b></h3></div>
                 <div style={{justifyContent:'space-between'}} className="px-5 py-3">
                     <div style={{margin:'10px'}}>
@@ -69,6 +69,7 @@ const Ui = () => {
                             placeholder="Username"
                             aria-describedby="inputGroupPrepend2" required
                             onChange={(e) => setUserName(e.target.value)}
+                            className="px-3 py-2"
                             
                         />
                     </div>
@@ -80,6 +81,7 @@ const Ui = () => {
                             placeholder="Password"
                             aria-describedby="inputGroupPrepend2" required
                             onChange={(e) => setPassword(e.target.value)}
+                            className="px-3 py-2"
                             />
                     </div>
                 </div>
@@ -88,6 +90,7 @@ const Ui = () => {
                 </button>
             </div>
         </form>
+        </div>
         
     )                                                       
 }
