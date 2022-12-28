@@ -1,5 +1,6 @@
 {
   "name": "treact",
+  "homepage": "https://avantika/scheduler",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +21,8 @@
     "devextreme-react": "^22.2.3",
     "feather-icons": "^4.29.0",
     "framer-motion": "^7.3.2",
-    "node-modules": "^1.0.1",
+    "gh-pages": "^4.0.0",
+    "node-modules": "^0.0.1",
     "react": "^18.0.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-axios": "^2.0.6",
@@ -42,7 +44,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && netlify deploy --prod --dir=build"
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app",
