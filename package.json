@@ -1,6 +1,6 @@
 {
   "name": "treact",
-  "homepage": "https://avantika/scheduler",
+  "homepage": "https://AiplDevReact.github.io/ReactAPICallEx",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,12 +40,12 @@
     "twin.macro": "^3.0.0-rc.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build",
-    "predeploy": "npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app",
