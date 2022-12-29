@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ReactAPICallEx/static/css/main.e2042322.css",
+    "main.js": "/ReactAPICallEx/static/js/main.cdd5a609.js",
+    "index.html": "/ReactAPICallEx/index.html",
+    "main.e2042322.css.map": "/ReactAPICallEx/static/css/main.e2042322.css.map",
+    "main.cdd5a609.js.map": "/ReactAPICallEx/static/js/main.cdd5a609.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2042322.css",
+    "static/js/main.cdd5a609.js"
+  ]
+}
